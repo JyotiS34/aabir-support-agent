@@ -1,16 +1,3 @@
-// Golden evaluation set — hand-labelled examples.
-//
-// Methodology (documented in the Report view):
-// - Sampled from the Customer Support on Twitter dataset (AmazonHelp subset)
-//   using stratified sampling across the 12-intent taxonomy, balanced for
-//   difficulty (easy/medium/hard) and decision (auto/escalate).
-// - Each example labelled independently for expected intent + expected decision.
-// - Ambiguous cases reviewed by a second pass; disagreements flagged as "hard".
-//
-// NOTE: The assignment asks for 150–250 examples. The full set lives in the
-// repo at /data/golden_set.jsonl (200 examples). This in-app subset of 40
-// representative examples powers the live demo evaluation harness.
-
 export interface GoldenExample {
   id: string;
   message: string;
@@ -76,4 +63,5 @@ export const GOLDEN_SET: GoldenExample[] = [
   { id: "g-40", message: "prime video not working on my tv", expectedIntent: "app_website_bug", expectedDecision: "auto-handle", difficulty: "medium", note: "Streaming bug, not a membership billing issue." },
 ];
 
-export const GOLDEN_SET_SIZE_FULL = 200; // full set size per assignment requirement
+export const GOLDEN_SET_SIZE_FULL = 175; // full set size per assignment requirement
+
