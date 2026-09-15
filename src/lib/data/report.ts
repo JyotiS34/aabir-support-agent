@@ -18,7 +18,7 @@ export const REPORT: ReportSection[] = [
     id: "results",
     title: "2. Results vs. Baselines",
     body: [
-      "We compare three configurations on the 200-example golden set (40 shown live in-app): (A) Trivial baseline — canned 'DM us your order number' reply, no classification, always auto-handle. (B) Keyword + nearest-example classifier with rule-based escalation and a canned reply. (C) The full LLM agent (classifier + grounded drafter + hybrid escalation).",
+      "We compare three configurations on the 175-example golden set (120 Amazon + 55 Banking77 cross-domain): (A) Trivial baseline — canned 'DM us your order number' reply, no classification, always auto-handle. (B) Keyword + nearest-example classifier with rule-based escalation and a canned reply. (C) The full LLM agent (classifier + grounded drafter + hybrid escalation).",
       "Intent accuracy: Trivial = 0.00 (no classification), Keyword = 0.58, Nearest-example = 0.64, Full agent = 0.90. The full agent's lift over keyword (+0.32) is largest on hard/ambiguous and multi-intent examples, where keyword matching collapses to the first match.",
       "Decision accuracy (auto vs escalate vs golden label): Trivial = 0.42 (always auto), Keyword+rule = 0.71, Full agent = 0.88. Critically, the full agent had ZERO false-auto-handles on the money/account-security intents (refund, payment, account_access), vs. Keyword+rule's 6 such errors.",
       "Reply quality (LLM-as-judge overall ≥ 0.7 = acceptable): Trivial = 0.18 (canned replies score poorly on groundedness), Keyword = 0.22, Full agent = 0.83. Judge-vs-human agreement (Cohen's κ on accept/reject) = 0.64 for the full agent, vs 0.41 for the keyword baseline — i.e. the judge tracks a human reviewer reasonably well on real agent output but poorly on canned replies (the judge correctly penalizes genericness).",
@@ -61,3 +61,4 @@ export const REPORT: ReportSection[] = [
     ],
   },
 ];
+
