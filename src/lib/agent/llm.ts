@@ -18,6 +18,7 @@ function configFromEnv(): Record<string, string> | null {
       // invalid JSON, fall through
     }
   }
+  // Option 2: Separate env vars (also supported if your platform allows multiple)
   const baseUrl = process.env.ZAI_BASE_URL;
   const apiKey = process.env.ZAI_API_KEY;
   if (!baseUrl || !apiKey) return null;
@@ -80,9 +81,18 @@ export async function llmComplete(
         ],
         thinking: { type: "disabled" },
       });
-      const content = completion.choices[0]?.message?.content ?? "";
+       if (!completion) {
+        throw new Error("LLM API returned an empty response. Check your ZAI_CONFIG credentials and baseUrl.");
+      }
+      const choices = completion.choices;
+      if (!Array.isArray(choices) || choices.length === 0) {
+        // The API returned a non-completion response — likely an auth or endpoint error
+        const errMsg = completion.error?.message || completion.message || JSON.stringify(completion).slice(0, 200);
+        throw new Error(`LLM API error: ${errMsg}. Verify ZAI_CONFIG baseUrl (should be https://api.z.ai/api/paas/v4) and apiKey are correct.`);
+      }
+      const content = choices[0]?.message?.content ?? "";
       if (!content || content.trim().length === 0) {
-        throw new Error("Empty LLM response");
+        throw new Error("Empty LLM response — the API returned no content.");
       }
       return { content, latencyMs: Date.now() - start };
     } catch (err) {
