@@ -45,7 +45,7 @@ local-*
 dev.log
 db/*.db
 dev.out.log
-test
+tests/
 prompt
 data/amazonhelp_tweets.csv      
 data/banking77_train.csv        
