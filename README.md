@@ -133,11 +133,11 @@ The 15 non-obvious engineering decisions are documented in-app under **Decision 
 3. Multi-intent messages collapse to the HIGHEST-severity intent
 4. Replies grounded in a hand-authored resolution-pattern library (not raw retrieved tweets)
 5. Escalation is hybrid: deterministic rule signals + LLM judgment, with rules as fallback
-6. Confidence threshold for escalation is 0.60 (tunable via the A/B view)
+6. Confidence threshold for escalation is 0.60 — chosen by running the A/B threshold view: it minimizes total cost while keeping wrong-auto at 9 and correct-escalate at 4 out of 26 messages. Tunable via the A/B view and Settings.
 7. LLM-as-judge rubric has 4 dimensions (groundedness, safety, tone, actionability)
 8. Judge agreement measured on binary accept/reject (Cohen's κ)
 9. Baselines: trivial canned reply + keyword/nearest-example classifier
-10. Golden set stratified across intent × difficulty × decision
+10. Golden set is 175 examples (120 Amazon + 55 Banking77 cross-domain), stratified across intent × difficulty × decision
 11. Replies capped at 280 chars (Twitter constraint)
 12. Latency reported per-call and averaged (not just p50)
 13. Cached analyses for instant Inbox/Analytics rendering
@@ -181,7 +181,7 @@ src/
 - **Framework**: Next.js 16 (App Router) + TypeScript 5
 - **Styling**: Tailwind CSS 4 + shadcn/ui 
 - **Database**: Prisma ORM + SQLite (dev)
-- **LLM**: Groq API → openai/gpt-oss-120b
+- **LLM**: Groq API → openai/gpt-oss-120b 
 - **Fine-tuned model**: bert-novel-v1 → custom BERT sentiment classifier (4-class: positive/negative/neutral/irrelevant), hosted at `jyqti-bert-novel.hf.space`
 - **Charts**: Recharts
 - **State**: Zustand (client) + React Query (server)
@@ -191,4 +191,5 @@ src/
 ## License
 
 MIT License. See [LICENSE](./LICENSE).
+
 
