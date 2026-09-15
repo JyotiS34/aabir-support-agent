@@ -90,26 +90,34 @@ const INTENT_GROUP_COLOR: Record<IntentGroup, string> = {
 };
 
 const SAMPLE_DATA: { confidence: number; shouldEscalate: boolean; severity: Severity; intentGroup: IntentGroup }[] = [
+  // status/delivery — should NOT escalate (routine)
   { confidence: 0.95, shouldEscalate: false, severity: "low", intentGroup: "status_delivery" },
   { confidence: 0.88, shouldEscalate: false, severity: "low", intentGroup: "status_delivery" },
   { confidence: 0.93, shouldEscalate: false, severity: "medium", intentGroup: "status_delivery" },
-  { confidence: 0.9, shouldEscalate: false, severity: "medium", intentGroup: "status_delivery" },
+  { confidence: 0.90, shouldEscalate: false, severity: "medium", intentGroup: "status_delivery" },
+  { confidence: 0.85, shouldEscalate: false, severity: "medium", intentGroup: "status_delivery" },
+  // damaged/refund — SHOULD escalate (some high-conf, some borderline)
   { confidence: 0.96, shouldEscalate: true, severity: "high", intentGroup: "damaged_refund" },
-  { confidence: 0.92, shouldEscalate: true, severity: "high", intentGroup: "damaged_refund" },
+  { confidence: 0.58, shouldEscalate: true, severity: "high", intentGroup: "damaged_refund" },   // ← low conf, gets escalated at 0.60
   { confidence: 0.94, shouldEscalate: true, severity: "high", intentGroup: "damaged_refund" },
-  { confidence: 0.93, shouldEscalate: true, severity: "high", intentGroup: "damaged_refund" },
+  { confidence: 0.55, shouldEscalate: true, severity: "high", intentGroup: "damaged_refund" },   // ← low conf
+  // returns/cancellations — should NOT escalate
   { confidence: 0.95, shouldEscalate: false, severity: "low", intentGroup: "returns_cancellations" },
   { confidence: 0.84, shouldEscalate: false, severity: "low", intentGroup: "returns_cancellations" },
   { confidence: 0.96, shouldEscalate: false, severity: "medium", intentGroup: "returns_cancellations" },
+  { confidence: 0.57, shouldEscalate: false, severity: "medium", intentGroup: "returns_cancellations" }, // ← low conf, causes over-escalation
+  // payment/account — SHOULD escalate (mix of high + borderline)
   { confidence: 0.91, shouldEscalate: true, severity: "high", intentGroup: "payment_account" },
-  { confidence: 0.86, shouldEscalate: true, severity: "high", intentGroup: "payment_account" },
+  { confidence: 0.59, shouldEscalate: true, severity: "high", intentGroup: "payment_account" },  // ← low conf
   { confidence: 0.94, shouldEscalate: true, severity: "high", intentGroup: "payment_account" },
   { confidence: 0.97, shouldEscalate: true, severity: "high", intentGroup: "payment_account" },
+  { confidence: 0.53, shouldEscalate: true, severity: "high", intentGroup: "payment_account" },   // ← low conf
+  // more routine (should NOT escalate)
   { confidence: 0.93, shouldEscalate: false, severity: "medium", intentGroup: "returns_cancellations" },
-  { confidence: 0.9, shouldEscalate: false, severity: "medium", intentGroup: "returns_cancellations" },
-  { confidence: 0.9, shouldEscalate: false, severity: "medium", intentGroup: "returns_cancellations" },
+  { confidence: 0.90, shouldEscalate: false, severity: "medium", intentGroup: "returns_cancellations" },
   { confidence: 0.88, shouldEscalate: false, severity: "low", intentGroup: "status_delivery" },
   { confidence: 0.92, shouldEscalate: false, severity: "low", intentGroup: "returns_cancellations" },
+  // hard/ambiguous cases
   { confidence: 0.78, shouldEscalate: true, severity: "high", intentGroup: "damaged_refund" },
   { confidence: 0.74, shouldEscalate: true, severity: "high", intentGroup: "damaged_refund" },
   { confidence: 0.68, shouldEscalate: true, severity: "high", intentGroup: "payment_account" },
