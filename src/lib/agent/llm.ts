@@ -5,7 +5,10 @@ import os from "os";
 
 let zaiInstance: Awaited<ReturnType<typeof ZAI.create>> | null = null;
 
+// Check if environment variables are set for the Z.ai config
 function configFromEnv(): Record<string, string> | null {
+  // Option 1: Single ZAI_CONFIG env var holding the full JSON config
+  //   Vercel: ZAI_CONFIG = {"baseUrl":"https://api.z.ai/api/v1","apiKey":"xxx","token":"xxx"}
   const fullConfig = process.env.ZAI_CONFIG;
   if (fullConfig) {
     try {
@@ -15,14 +18,15 @@ function configFromEnv(): Record<string, string> | null {
       // invalid JSON, fall through
     }
   }
-  // Option 2: Separate env vars (also supported if your platform allows multiple)
   const baseUrl = process.env.ZAI_BASE_URL;
   const apiKey = process.env.ZAI_API_KEY;
   if (!baseUrl || !apiKey) return null;
   return {
     baseUrl,
     apiKey,
+    ...(process.env.ZAI_TOKEN ? { token: process.env.ZAI_TOKEN } : {}),
     ...(process.env.ZAI_USER_ID ? { userId: process.env.ZAI_USER_ID } : {}),
+    ...(process.env.ZAI_CHAT_ID ? { chatId: process.env.ZAI_CHAT_ID } : {}),
   };
 }
 
