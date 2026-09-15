@@ -1,14 +1,10 @@
 import ZAI from "z-ai-web-dev-sdk";
 import { promises as fs } from "fs";
 import path from "path";
-import os from "os";
 
 let zaiInstance: Awaited<ReturnType<typeof ZAI.create>> | null = null;
 
-// Check if environment variables are set for the Z.ai config
 function configFromEnv(): Record<string, string> | null {
-  // Option 1: Single ZAI_CONFIG env var holding the full JSON config
-  //   Vercel: ZAI_CONFIG = {"baseUrl":"https://api.z.ai/api/v1","apiKey":"xxx","token":"xxx"}
   const fullConfig = process.env.ZAI_CONFIG;
   if (fullConfig) {
     try {
@@ -18,20 +14,16 @@ function configFromEnv(): Record<string, string> | null {
       // invalid JSON, fall through
     }
   }
-  // Option 2: Separate env vars (also supported if your platform allows multiple)
   const baseUrl = process.env.ZAI_BASE_URL;
   const apiKey = process.env.ZAI_API_KEY;
   if (!baseUrl || !apiKey) return null;
   return {
     baseUrl,
     apiKey,
-    ...(process.env.ZAI_TOKEN ? { token: process.env.ZAI_TOKEN } : {}),
     ...(process.env.ZAI_USER_ID ? { userId: process.env.ZAI_USER_ID } : {}),
-    ...(process.env.ZAI_CHAT_ID ? { chatId: process.env.ZAI_CHAT_ID } : {}),
   };
 }
 
-// Write env-based config to a temp .z-ai-config file so the SDK can read it
 async function ensureConfigFile(): Promise<void> {
   const envConfig = configFromEnv();
   if (!envConfig) return; // no env vars → SDK will look for the file itself
@@ -44,14 +36,12 @@ async function ensureConfigFile(): Promise<void> {
     // If we can't write to cwd (e.g., read-only filesystem), try /tmp
     const tmpPath = "/tmp/.z-ai-config";
     await fs.writeFile(tmpPath, JSON.stringify(envConfig, null, 2), "utf-8");
-    // Set HOME to /tmp so the SDK finds it there
     process.env.HOME = "/tmp";
   }
 }
 
 export async function getLLM() {
   if (!zaiInstance) {
-    // If env vars are set, write a config file from them before the SDK loads
     await ensureConfigFile();
     zaiInstance = await ZAI.create();
   }
@@ -75,18 +65,18 @@ export async function llmComplete(
     try {
       const zai = await getLLM();
       const completion = await zai.chat.completions.create({
+        model: "glm-4-plus",
         messages: [
           { role: "assistant", content: systemPrompt },
           { role: "user", content: userPrompt },
         ],
         thinking: { type: "disabled" },
       });
-       if (!completion) {
+      if (!completion) {
         throw new Error("LLM API returned an empty response. Check your ZAI_CONFIG credentials and baseUrl.");
       }
       const choices = completion.choices;
       if (!Array.isArray(choices) || choices.length === 0) {
-        // The API returned a non-completion response — likely an auth or endpoint error
         const errMsg = completion.error?.message || completion.message || JSON.stringify(completion).slice(0, 200);
         throw new Error(`LLM API error: ${errMsg}. Verify ZAI_CONFIG baseUrl (should be https://api.z.ai/api/paas/v4) and apiKey are correct.`);
       }
@@ -105,18 +95,15 @@ export async function llmComplete(
   throw lastError instanceof Error ? lastError : new Error("LLM completion failed");
 }
 
-// Extract the first JSON object from a possibly-noisy LLM string.
 export function extractJson<T = unknown>(raw: string): T {
   const cleaned = raw
     .replace(/^```json\s*/i, "")
     .replace(/^```\s*/i, "")
     .replace(/```\s*$/i, "")
     .trim();
-  // try direct parse first
   try {
     return JSON.parse(cleaned) as T;
   } catch {
-    // fall back to first {...} block
     const match = cleaned.match(/\{[\s\S]*\}/);
     if (match) {
       return JSON.parse(match[0]) as T;
@@ -124,3 +111,4 @@ export function extractJson<T = unknown>(raw: string): T {
     throw new Error("No JSON object found in LLM response");
   }
 }
+
