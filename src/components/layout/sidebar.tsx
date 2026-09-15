@@ -24,7 +24,7 @@ const NAV: { id: ViewId; label: string; icon: React.ElementType; desc: string }[
   { id: "evaluation", label: "Evaluation", icon: ClipboardCheck, desc: "Golden set + judge" },
   { id: "abtest", label: "A/B Threshold", icon: FlaskConical, desc: "Confidence threshold tuning" },
   { id: "feedback", label: "Feedback Loop", icon: MessageCircleHeart, desc: "Human-in-the-loop signals" },
-  { id: "report", label: "Report", icon: FileText, desc: "Findings + Next Steps" },
+  { id: "report", label: "Report", icon: FileText, desc: "Findings + deployment" },
   { id: "decisions", label: "Decision Log", icon: ListChecks, desc: "Engineering calls" },
   { id: "settings", label: "Settings", icon: SettingsIcon, desc: "Configure the agent" },
 ];
@@ -79,7 +79,7 @@ export function Sidebar() {
             <div className="text-xl font-bold tracking-tight text-sidebar-foreground">
               Aabir
             </div>
-            <div className="text-[20px] text-muted-foreground">AI Support Agent</div>
+            <div className="text-[11px] text-muted-foreground">AI Support Agent</div>
           </div>
           <button
             className="rounded-md p-1.5 text-muted-foreground hover:bg-sidebar-accent md:hidden"
@@ -179,7 +179,7 @@ export function Sidebar() {
               <span className="text-[11px] font-medium text-foreground">Agent online</span>
             </div>
             <span className="rounded bg-primary/10 px-1.5 py-0.5 text-[9px] font-mono font-medium text-primary">
-              zai-llm-v1
+              openai/gpt-oss-120b
             </span>
           </div>
         </div>
