@@ -2,7 +2,7 @@
 
 An AI customer-support agent that classifies intent, drafts grounded replies, and decides auto-handle vs escalate — built on real data from the Customer Support on Twitter dataset and cross-validated on Banking77.
 
-**Powered by [z-ai-web-dev-sdk](https://www.npmjs.com/package/z-ai-web-dev-sdk) v0.0.18** — the agent's classifier, reply drafter, escalation decider, and LLM-based sentiment classifier all use the **GLM-4-Plus** model (Zhipu AI / Z.ai) via the z-ai-web-dev-sdk, running server-side in Next.js API route handlers. A fine-tuned BERT sentiment model (**bert-novel-v1**) is also integrated for side-by-side comparison, hosted at `jyqti-bert-novel.hf.space`.
+**Powered by [Groq](https://groq.com)** — the agent's classifier, reply drafter, escalation decider, and LLM-based sentiment classifier all use the **openai/gpt-oss-120b** model via Groq's free API, running server-side in Next.js API route handlers. A fine-tuned BERT sentiment model (**bert-novel-v1**) is also integrated for side-by-side comparison, hosted at `jyqti-bert-novel.hf.space`.
 
 ---
 
@@ -26,7 +26,7 @@ bun run dev
 2. The golden set loads automatically — 120 real @AmazonHelp tweets + 55 Banking77 cross-domain = 175 golden examples sampled from the Kaggle dataset. The keyword-baseline metrics appear instantly:
    - Intent accuracy: **79.2%** (keyword baseline on real data)
    - Decision F1: **0.93**
-3. Click **"Run live eval (4 samples)"** — this calls the live GLM-4-Plus agent on 4 random real tweets. Expected result: **~100% intent + decision accuracy** (the LLM agent significantly outperforms the keyword baseline).
+3. Click **"Run live eval (4 samples)"** — this calls the live openai/gpt-oss-120b agent on 4 random real tweets. Expected result: **~100% intent + decision accuracy** (the LLM agent significantly outperforms the keyword baseline).
 4. Scroll down to the **Banking77** card — 55 real cross-domain examples show the keyword baseline dropping to **16.4%** (banking queries don't contain Amazon-domain keywords), demonstrating why a semantic LLM classifier matters.
 
 ### Try the live agent (2 min)
@@ -41,7 +41,7 @@ Navigate to **Playground** → type a customer message (or click a sample) → p
 
 ### Browse the cached Inbox (instant)
 
-Navigate to **Agent Inbox** — 27 pre-analyzed @AmazonHelp conversations with intent, sentiment, draft reply, and escalation decision. Click any message to see the full analysis. Click "Run live" to re-run the agent on that message via GLM-4-Plus.
+Navigate to **Agent Inbox** — 27 pre-analyzed @AmazonHelp conversations with intent, sentiment, draft reply, and escalation decision. Click any message to see the full analysis. Click "Run live" to re-run the agent on that message via openai/gpt-oss-120b.
 
 ---
 
@@ -64,7 +64,7 @@ Navigate to **Agent Inbox** — 27 pre-analyzed @AmazonHelp conversations with i
 
 ## Headline results
 
-| Metric | Keyword baseline | Full LLM agent (GLM-4-Plus) |
+| Metric | Keyword baseline | Full LLM agent (openai/gpt-oss-120b) |
 |---|---|---|
 | Intent accuracy (Amazon golden set) | 79.2% | ~100% (4-sample live) |
 | Decision F1 | 0.93 | — |
@@ -157,7 +157,7 @@ src/
 │   ├── escalation.ts    # Hybrid escalation (rule signals + LLM)
 │   ├── sentiment.ts     # Fine-tuned sentiment classifier (aabir-sentiment-v1)
 │   ├── prompts.ts       # All LLM prompt templates
-│   └── llm.ts           # z-ai-web-dev-sdk wrapper (GLM-4-Plus)
+│   └── llm.ts           # Groq API wrapper (openai/gpt-oss-120b)
 ├── lib/data/            # Datasets + cached results
 │   ├── seed-conversations.ts    # 27 @AmazonHelp conversations
 │   ├── golden-set.ts            # Synthetic fallback golden set
@@ -181,7 +181,7 @@ src/
 - **Framework**: Next.js 16 (App Router) + TypeScript 5
 - **Styling**: Tailwind CSS 4 + shadcn/ui 
 - **Database**: Prisma ORM + SQLite (dev)
-- **LLM**: z-ai-web-dev-sdk v0.0.18 → GLM-4-Plus (Zhipu AI / Z.ai)
+- **LLM**: Groq API → openai/gpt-oss-120b
 - **Fine-tuned model**: bert-novel-v1 → custom BERT sentiment classifier (4-class: positive/negative/neutral/irrelevant), hosted at `jyqti-bert-novel.hf.space`
 - **Charts**: Recharts
 - **State**: Zustand (client) + React Query (server)
@@ -191,5 +191,4 @@ src/
 ## License
 
 MIT License. See [LICENSE](./LICENSE).
-
 
