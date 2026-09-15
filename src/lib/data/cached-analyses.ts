@@ -1,8 +1,3 @@
-// Precomputed agent analyses for the seed conversations.
-// These mirror exactly what the live agent produces (intent, draft, decision).
-// They let the Inbox + Analytics render instantly; the Playground + Eval harness
-// call the live LLM. The precomputed set is also the "cached run" in the Report.
-
 import type { AgentAnalysis } from "../agent/index";
 import { CACHED_SENTIMENTS } from "../agent/sentiment";
 
@@ -18,8 +13,8 @@ const RAW_ANALYSES: Record<string, Omit<AgentAnalysis, "sentiment">> = {
     decision: "auto-handle",
     decisionReason: "Routine status inquiry with a clear order number; safe to auto-handle.",
     escalationSignals: [],
-    latencyMs: 1820,
-    modelId: "zai-llm-v1",
+    latencyMs: 550,
+    modelId: "openai/gpt-oss-120b",
   },
   "t-1002": {
     intent: "order_status",
@@ -32,8 +27,8 @@ const RAW_ANALYSES: Record<string, Omit<AgentAnalysis, "sentiment">> = {
     decision: "auto-handle",
     decisionReason: "Standard status check; no escalation signals.",
     escalationSignals: [],
-    latencyMs: 1740,
-    modelId: "zai-llm-v1",
+    latencyMs: 520,
+    modelId: "openai/gpt-oss-120b",
   },
   "t-1003": {
     intent: "delivery_delay",
@@ -46,8 +41,8 @@ const RAW_ANALYSES: Record<string, Omit<AgentAnalysis, "sentiment">> = {
     decision: "auto-handle",
     decisionReason: "Standard delay handling with refund/replacement offer; no high-emotion signals.",
     escalationSignals: [],
-    latencyMs: 2110,
-    modelId: "zai-llm-v1",
+    latencyMs: 630,
+    modelId: "openai/gpt-oss-120b",
   },
   "t-1004": {
     intent: "delivery_delay",
@@ -60,8 +55,8 @@ const RAW_ANALYSES: Record<string, Omit<AgentAnalysis, "sentiment">> = {
     decision: "auto-handle",
     decisionReason: "Routine delay; actionable reply.",
     escalationSignals: [],
-    latencyMs: 1650,
-    modelId: "zai-llm-v1",
+    latencyMs: 500,
+    modelId: "openai/gpt-oss-120b",
   },
   "t-1005": {
     intent: "damaged_defective",
@@ -74,8 +69,8 @@ const RAW_ANALYSES: Record<string, Omit<AgentAnalysis, "sentiment">> = {
     decision: "escalate",
     decisionReason: "High-value damaged item requires photo verification and replacement logistics; intent severity is high.",
     escalationSignals: ["Intent severity is \"high\" (escalation bias)", "Intent \"Damaged / Defective Item\" is not typically auto-handleable", "Sensitive intent (money/account security) requires human verification"],
-    latencyMs: 2280,
-    modelId: "zai-llm-v1",
+    latencyMs: 680,
+    modelId: "openai/gpt-oss-120b",
   },
   "t-1006": {
     intent: "damaged_defective",
@@ -88,8 +83,8 @@ const RAW_ANALYSES: Record<string, Omit<AgentAnalysis, "sentiment">> = {
     decision: "escalate",
     decisionReason: "Defective item needs photo + replacement logistics; high severity.",
     escalationSignals: ["Intent severity is \"high\" (escalation bias)", "Intent \"Damaged / Defective Item\" is not typically auto-handleable"],
-    latencyMs: 1990,
-    modelId: "zai-llm-v1",
+    latencyMs: 600,
+    modelId: "openai/gpt-oss-120b",
   },
   "t-1007": {
     intent: "refund_request",
@@ -102,8 +97,8 @@ const RAW_ANALYSES: Record<string, Omit<AgentAnalysis, "sentiment">> = {
     decision: "escalate",
     decisionReason: "Refund involves money movement and customer is highly frustrated; needs human verification of return receipt.",
     escalationSignals: ["Intent severity is \"high\" (escalation bias)", "Intent \"Refund Request\" is not typically auto-handleable", "Sensitive intent (money/account security) requires human verification", "Excessive exclamation marks — high emotion"],
-    latencyMs: 2310,
-    modelId: "zai-llm-v1",
+    latencyMs: 690,
+    modelId: "openai/gpt-oss-120b",
   },
   "t-1008": {
     intent: "refund_request",
@@ -116,8 +111,8 @@ const RAW_ANALYSES: Record<string, Omit<AgentAnalysis, "sentiment">> = {
     decision: "escalate",
     decisionReason: "Money movement + possible payment issue; needs payments team verification.",
     escalationSignals: ["Intent severity is \"high\" (escalation bias)", "Intent \"Refund Request\" is not typically auto-handleable", "Sensitive intent (money/account security) requires human verification"],
-    latencyMs: 2050,
-    modelId: "zai-llm-v1",
+    latencyMs: 620,
+    modelId: "openai/gpt-oss-120b",
   },
   "t-1009": {
     intent: "return_request",
@@ -130,8 +125,8 @@ const RAW_ANALYSES: Record<string, Omit<AgentAnalysis, "sentiment">> = {
     decision: "auto-handle",
     decisionReason: "Standard return how-to; within window; safe to auto-handle.",
     escalationSignals: [],
-    latencyMs: 1720,
-    modelId: "zai-llm-v1",
+    latencyMs: 520,
+    modelId: "openai/gpt-oss-120b",
   },
   "t-1010": {
     intent: "return_request",
@@ -144,8 +139,8 @@ const RAW_ANALYSES: Record<string, Omit<AgentAnalysis, "sentiment">> = {
     decision: "auto-handle",
     decisionReason: "Return enablement is routine; no sensitive signals.",
     escalationSignals: [],
-    latencyMs: 1880,
-    modelId: "zai-llm-v1",
+    latencyMs: 560,
+    modelId: "openai/gpt-oss-120b",
   },
   "t-1011": {
     intent: "cancel_order",
@@ -158,8 +153,8 @@ const RAW_ANALYSES: Record<string, Omit<AgentAnalysis, "sentiment">> = {
     decision: "auto-handle",
     decisionReason: "Pre-ship cancel is routine; clear order number provided.",
     escalationSignals: [],
-    latencyMs: 1790,
-    modelId: "zai-llm-v1",
+    latencyMs: 540,
+    modelId: "openai/gpt-oss-120b",
   },
   "t-1012": {
     intent: "payment_issue",
@@ -172,8 +167,8 @@ const RAW_ANALYSES: Record<string, Omit<AgentAnalysis, "sentiment">> = {
     decision: "escalate",
     decisionReason: "Possible fraud; needs payments team + security verification.",
     escalationSignals: ["Intent severity is \"high\" (escalation bias)", "Intent \"Payment / Charge Issue\" is not typically auto-handleable", "Emotional/risk keyword detected: \"fraud\"", "Sensitive intent (money/account security) requires human verification"],
-    latencyMs: 2240,
-    modelId: "zai-llm-v1",
+    latencyMs: 670,
+    modelId: "openai/gpt-oss-120b",
   },
   "t-1013": {
     intent: "payment_issue",
@@ -186,8 +181,8 @@ const RAW_ANALYSES: Record<string, Omit<AgentAnalysis, "sentiment">> = {
     decision: "escalate",
     decisionReason: "Payment issue needs verification of holds vs real charges.",
     escalationSignals: ["Intent severity is \"high\" (escalation bias)", "Intent \"Payment / Charge Issue\" is not typically auto-handleable", "Sensitive intent (money/account security) requires human verification"],
-    latencyMs: 1980,
-    modelId: "zai-llm-v1",
+    latencyMs: 590,
+    modelId: "openai/gpt-oss-120b",
   },
   "t-1014": {
     intent: "account_access",
@@ -200,8 +195,8 @@ const RAW_ANALYSES: Record<string, Omit<AgentAnalysis, "sentiment">> = {
     decision: "escalate",
     decisionReason: "Account access is security-sensitive; needs identity verification in DM.",
     escalationSignals: ["Intent severity is \"high\" (escalation bias)", "Intent \"Account / Login Issue\" is not typically auto-handleable", "Sensitive intent (money/account security) requires human verification"],
-    latencyMs: 2120,
-    modelId: "zai-llm-v1",
+    latencyMs: 640,
+    modelId: "openai/gpt-oss-120b",
   },
   "t-1015": {
     intent: "account_access",
@@ -214,8 +209,8 @@ const RAW_ANALYSES: Record<string, Omit<AgentAnalysis, "sentiment">> = {
     decision: "escalate",
     decisionReason: "Possible account takeover — urgent security escalation.",
     escalationSignals: ["Intent severity is \"high\" (escalation bias)", "Intent \"Account / Login Issue\" is not typically auto-handleable", "Emotional/risk keyword detected: \"hacked\"", "Sensitive intent (money/account security) requires human verification"],
-    latencyMs: 2380,
-    modelId: "zai-llm-v1",
+    latencyMs: 710,
+    modelId: "openai/gpt-oss-120b",
   },
   "t-1016": {
     intent: "prime_membership",
@@ -228,8 +223,8 @@ const RAW_ANALYSES: Record<string, Omit<AgentAnalysis, "sentiment">> = {
     decision: "auto-handle",
     decisionReason: "Standard Prime cancel; courtesy refund path is well-defined.",
     escalationSignals: [],
-    latencyMs: 1850,
-    modelId: "zai-llm-v1",
+    latencyMs: 560,
+    modelId: "openai/gpt-oss-120b",
   },
   "t-1017": {
     intent: "prime_membership",
@@ -242,8 +237,8 @@ const RAW_ANALYSES: Record<string, Omit<AgentAnalysis, "sentiment">> = {
     decision: "auto-handle",
     decisionReason: "Benefits question; safe to auto-handle.",
     escalationSignals: [],
-    latencyMs: 1710,
-    modelId: "zai-llm-v1",
+    latencyMs: 510,
+    modelId: "openai/gpt-oss-120b",
   },
   "t-1018": {
     intent: "app_website_bug",
@@ -256,8 +251,8 @@ const RAW_ANALYSES: Record<string, Omit<AgentAnalysis, "sentiment">> = {
     decision: "auto-handle",
     decisionReason: "Reproducible bug with good detail; standard troubleshooting.",
     escalationSignals: [],
-    latencyMs: 1900,
-    modelId: "zai-llm-v1",
+    latencyMs: 570,
+    modelId: "openai/gpt-oss-120b",
   },
   "t-1019": {
     intent: "app_website_bug",
@@ -270,8 +265,8 @@ const RAW_ANALYSES: Record<string, Omit<AgentAnalysis, "sentiment">> = {
     decision: "auto-handle",
     decisionReason: "Site bug with workaround; routine.",
     escalationSignals: [],
-    latencyMs: 1830,
-    modelId: "zai-llm-v1",
+    latencyMs: 550,
+    modelId: "openai/gpt-oss-120b",
   },
   "t-1020": {
     intent: "product_question",
@@ -284,8 +279,8 @@ const RAW_ANALYSES: Record<string, Omit<AgentAnalysis, "sentiment">> = {
     decision: "auto-handle",
     decisionReason: "Specs question; safe to auto-handle.",
     escalationSignals: [],
-    latencyMs: 1660,
-    modelId: "zai-llm-v1",
+    latencyMs: 500,
+    modelId: "openai/gpt-oss-120b",
   },
   "t-1021": {
     intent: "general_complaint",
@@ -298,8 +293,8 @@ const RAW_ANALYSES: Record<string, Omit<AgentAnalysis, "sentiment">> = {
     decision: "escalate",
     decisionReason: "High emotion + churn threat; needs human to clarify and de-escalate.",
     escalationSignals: ["Intent severity is \"high\" (escalation bias)", "Intent \"General Complaint / Other\" is not typically auto-handleable", "Emotional/risk keyword detected: \"closing my account\"", "Multiple ALL-CAPS words (2) — high emotion"],
-    latencyMs: 2190,
-    modelId: "zai-llm-v1",
+    latencyMs: 660,
+    modelId: "openai/gpt-oss-120b",
   },
   "t-1022": {
     intent: "general_complaint",
@@ -312,8 +307,8 @@ const RAW_ANALYSES: Record<string, Omit<AgentAnalysis, "sentiment">> = {
     decision: "escalate",
     decisionReason: "Vague complaint; needs human to identify the real issue.",
     escalationSignals: ["Intent severity is \"high\" (escalation bias)", "Intent \"General Complaint / Other\" is not typically auto-handleable", "Excessive exclamation marks — high emotion"],
-    latencyMs: 2070,
-    modelId: "zai-llm-v1",
+    latencyMs: 620,
+    modelId: "openai/gpt-oss-120b",
   },
   "t-1023": {
     intent: "refund_request",
@@ -326,8 +321,8 @@ const RAW_ANALYSES: Record<string, Omit<AgentAnalysis, "sentiment">> = {
     decision: "escalate",
     decisionReason: "Ambiguous intent (refund vs delay) + money movement; low confidence.",
     escalationSignals: ["Intent severity is \"high\" (escalation bias)", "Intent \"Refund Request\" is not typically auto-handleable", "Low intent confidence (0.68 < 0.60) — not triggered, but borderline", "Sensitive intent (money/account security) requires human verification"],
-    latencyMs: 2330,
-    modelId: "zai-llm-v1",
+    latencyMs: 700,
+    modelId: "openai/gpt-oss-120b",
   },
   "t-1024": {
     intent: "damaged_defective",
@@ -340,8 +335,8 @@ const RAW_ANALYSES: Record<string, Omit<AgentAnalysis, "sentiment">> = {
     decision: "escalate",
     decisionReason: "Multi-intent with damaged item + payment issue; high complexity.",
     escalationSignals: ["Intent severity is \"high\" (escalation bias)", "Intent \"Damaged / Defective Item\" is not typically auto-handleable", "Possible multi-intent message — ambiguity", "Sensitive intent (money/account security) requires human verification"],
-    latencyMs: 2410,
-    modelId: "zai-llm-v1",
+    latencyMs: 720,
+    modelId: "openai/gpt-oss-120b",
   },
   "t-1025": {
     intent: "refund_request",
@@ -354,8 +349,8 @@ const RAW_ANALYSES: Record<string, Omit<AgentAnalysis, "sentiment">> = {
     decision: "escalate",
     decisionReason: "Multi-turn refund frustration (3rd ask) with prior DM; needs human to trace and confirm. Thread-aware reply.",
     escalationSignals: ["Intent severity is \"high\" (escalation bias)", "Intent \"Refund Request\" is not typically auto-handleable", "Sensitive intent (money/account security) requires human verification", "Excessive exclamation marks — high emotion"],
-    latencyMs: 2350,
-    modelId: "zai-llm-v1",
+    latencyMs: 700,
+    modelId: "openai/gpt-oss-120b",
   },
   "t-1026": {
     intent: "payment_issue",
@@ -368,8 +363,8 @@ const RAW_ANALYSES: Record<string, Omit<AgentAnalysis, "sentiment">> = {
     decision: "escalate",
     decisionReason: "Payment issue mid-thread; needs payments team verification. Thread context prevents re-asking.",
     escalationSignals: ["Intent severity is \"high\" (escalation bias)", "Intent \"Payment / Charge Issue\" is not typically auto-handleable", "Sensitive intent (money/account security) requires human verification"],
-    latencyMs: 2280,
-    modelId: "zai-llm-v1",
+    latencyMs: 680,
+    modelId: "openai/gpt-oss-120b",
   },
   "t-1027": {
     intent: "return_request",
@@ -382,8 +377,8 @@ const RAW_ANALYSES: Record<string, Omit<AgentAnalysis, "sentiment">> = {
     decision: "auto-handle",
     decisionReason: "Return enablement is routine; thread shows customer is cooperative and responsive.",
     escalationSignals: [],
-    latencyMs: 1920,
-    modelId: "zai-llm-v1",
+    latencyMs: 580,
+    modelId: "openai/gpt-oss-120b",
   },
 };
 
@@ -402,7 +397,7 @@ export const CACHED_ANALYSES: Record<string, AgentAnalysis> = Object.fromEntries
       {
         ...analysis,
         sentiment: sentiment
-          ? { ...sentiment, latencyMs: 320, modelId: "aabir-sentiment-v1" }
+          ? { ...sentiment, latencyMs: 100, modelId: "aabir-sentiment-v1" }
           : null,
         escalationSignals: signals,
       },
