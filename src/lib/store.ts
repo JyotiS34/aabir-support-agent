@@ -27,11 +27,11 @@ export interface Settings {
 }
 
 const DEFAULT_SETTINGS: Settings = {
-  githubRepoUrl: "https://github.com/your-org/aabir-support-agent",
+  githubRepoUrl: "https://github.com/JyotiS34/aabir-support-agent/",
   costWrongAuto: 25,
   costHumanReview: 4,
   costGoodAuto: -2,
-  deployedThreshold: 0.6,
+  deployedThreshold: 0.60,
   brandName: "Amazon Help",
   brandHandle: "@AmazonHelp",
 };
