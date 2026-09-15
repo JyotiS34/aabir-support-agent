@@ -72,7 +72,7 @@ export function AgentDetail({ message }: { message: SelectedMessage }) {
       if (data.ok) {
         setLiveAnalysis(data.analysis);
         toast.success("Live analysis complete", {
-          description: `${data.analysis.latencyMs}ms · zai-llm-v1`,
+          description: `${data.analysis.latencyMs}ms · openai/gpt-oss-120b`,
         });
       } else {
         toast.error("Analysis failed", { description: data.error });
