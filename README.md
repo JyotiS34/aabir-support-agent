@@ -179,7 +179,7 @@ src/
 
 ### Tech stack
 - **Framework**: Next.js 16 (App Router) + TypeScript 5
-- **Styling**: Tailwind CSS 4 + shadcn/ui (New York)
+- **Styling**: Tailwind CSS 4 + shadcn/ui 
 - **Database**: Prisma ORM + SQLite (dev)
 - **LLM**: z-ai-web-dev-sdk v0.0.18 → GLM-4-Plus (Zhipu AI / Z.ai)
 - **Fine-tuned model**: bert-novel-v1 → custom BERT sentiment classifier (4-class: positive/negative/neutral/irrelevant), hosted at `jyqti-bert-novel.hf.space`
