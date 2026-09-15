@@ -1,7 +1,3 @@
-// Agent orchestrator — runs classifier → (drafter + escalation + sentiment) in parallel,
-// returns a full analysis. Also exposes a deterministic cached-analyses store
-// so the Inbox can render instantly without re-calling the LLM on every load.
-
 import { classifyIntent, classifyByKeywords, classifyByNearestExample, type ClassificationResult } from "./classifier";
 import { draftReply, trivialReply, type DraftResult } from "./drafter";
 import { decideEscalation, ruleBasedDecision, type EscalationResult, type Decision } from "./escalation";
@@ -122,7 +118,7 @@ export async function analyzeMessage(
     decisionReason: esc.reason,
     escalationSignals: signals,
     latencyMs: Date.now() - start,
-    modelId: "zai-llm-v1",
+    modelId: "openai/gpt-oss-120b",
   };
 }
 
