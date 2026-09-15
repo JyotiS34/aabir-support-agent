@@ -3,7 +3,13 @@ import { promises as fs } from "fs";
 import path from "path";
 
 const GROQ_URL = "https://api.groq.com/openai/v1/chat/completions";
-const GROQ_MODEL = "llama-3.3-70b-versatile";
+const GROQ_MODELS = [
+  "openai/gpt-oss-120b",     
+  "openai/gpt-oss-20b",      
+  "qwen/qwen3.8-27b",        
+  "groq/compound",           
+  "groq/compound-mini",     
+];
 
 let zaiInstance: Awaited<ReturnType<typeof ZAI.create>> | null = null;
 
@@ -13,9 +19,7 @@ function configFromEnv(): Record<string, string> | null {
     try {
       const parsed = JSON.parse(fullConfig);
       if (parsed.baseUrl && parsed.apiKey) return parsed;
-    } catch {
-      // invalid JSON, fall through
-    }
+    } catch {}
   }
   const baseUrl = process.env.ZAI_BASE_URL;
   const apiKey = process.env.ZAI_API_KEY;
@@ -53,6 +57,8 @@ export interface LLMResult {
   latencyMs: number;
 }
 
+let workingGroqModel: string | null = null;
+
 async function callGroq(
   systemPrompt: string,
   userPrompt: string,
@@ -60,38 +66,63 @@ async function callGroq(
   const apiKey = process.env.GROQ_API_KEY;
   if (!apiKey) throw new Error("GROQ_API_KEY not set");
 
-  const start = Date.now();
-  const res = await fetch(GROQ_URL, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${apiKey}`,
-    },
-    body: JSON.stringify({
-      model: GROQ_MODEL,
-      messages: [
-        { role: "system", content: systemPrompt },
-        { role: "user", content: userPrompt },
-      ],
-      temperature: 0.3,
-      max_tokens: 1024,
-    }),
-  });
+  const modelsToTry = workingGroqModel ? [workingGroqModel] : GROQ_MODELS;
 
-  if (!res.ok) {
-    const errText = await res.text().catch(() => "");
-    throw new Error(`Groq API error ${res.status}: ${errText.slice(0, 200)}`);
+  let lastError: unknown;
+  for (const model of modelsToTry) {
+    const start = Date.now();
+    try {
+      const res = await fetch(GROQ_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${apiKey}`,
+        },
+        body: JSON.stringify({
+          model,
+          messages: [
+            { role: "system", content: systemPrompt },
+            { role: "user", content: userPrompt },
+          ],
+          temperature: 0.3,
+          max_tokens: 1024,
+        }),
+      });
+
+      if (!res.ok) {
+        const errData = await res.json().catch(() => ({}));
+        const errMsg = errData?.error?.message || `status ${res.status}`;
+        // If model not found, try next model
+        if (res.status === 404 || errMsg.includes("does not exist") || errMsg.includes("model_not_found")) {
+          lastError = new Error(`Groq model "${model}" not available: ${errMsg}`);
+          continue; // try next model
+        }
+        // Other errors (rate limit, auth, etc.) — throw immediately
+        throw new Error(`Groq API error ${res.status}: ${errMsg}`);
+      }
+
+      const data = await res.json();
+      const content = data?.choices?.[0]?.message?.content ?? "";
+      if (!content || content.trim().length === 0) {
+        throw new Error(`Groq returned empty content for model ${model}`);
+      }
+
+      workingGroqModel = model;
+      return { content, latencyMs: Date.now() - start };
+    } catch (err) {
+      lastError = err;
+      const msg = err instanceof Error ? err.message : "";
+      if (!msg.includes("not available") && !msg.includes("model_not_found")) {
+        throw err;
+      }
+    }
   }
 
-  const data = await res.json();
-  const content = data?.choices?.[0]?.message?.content ?? "";
-  if (!content || content.trim().length === 0) {
-    throw new Error("Groq returned empty content");
-  }
-  return { content, latencyMs: Date.now() - start };
+  throw lastError instanceof Error
+    ? lastError
+    : new Error("All Groq models failed. Check your GROQ_API_KEY at console.groq.com");
 }
 
-// Call Z.ai's API (via SDK, as fallback)
 async function callZai(
   systemPrompt: string,
   userPrompt: string,
@@ -128,8 +159,6 @@ export async function llmComplete(
 ): Promise<LLMResult> {
   const retries = opts.retries ?? 2;
 
-  // Determine which provider to use
-  // Priority: Groq (free) → Z.ai (paid)
   const useGroq = !!process.env.GROQ_API_KEY || !!process.env.ZAI_CONFIG?.includes("groq");
 
   let lastError: unknown;
@@ -142,7 +171,6 @@ export async function llmComplete(
       }
     } catch (err) {
       lastError = err;
-      // If Groq fails, try Z.ai as fallback (if Z.ai config exists)
       if (useGroq && (process.env.ZAI_CONFIG || await hasZaiConfigFile())) {
         try {
           return await callZai(systemPrompt, userPrompt);
@@ -167,7 +195,6 @@ async function hasZaiConfigFile(): Promise<boolean> {
   }
 }
 
-// Extract the first JSON object from a possibly-noisy LLM string.
 export function extractJson<T = unknown>(raw: string): T {
   const cleaned = raw
     .replace(/^```json\s*/i, "")
@@ -184,4 +211,3 @@ export function extractJson<T = unknown>(raw: string): T {
     throw new Error("No JSON object found in LLM response");
   }
 }
-
