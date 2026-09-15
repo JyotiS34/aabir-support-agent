@@ -127,7 +127,7 @@ export async function GET() {
       judgeAccept: 0.83,
       judgeKappa: 0.64,
       autoHandleRate: 0.5,
-      p50LatencyMs: 1940,
+      p50LatencyMs: 580,
       falseAutoHandleOnSensitive: 0,
     },
   ];
@@ -159,3 +159,4 @@ export async function GET() {
     volumeByHour,
   });
 }
+
