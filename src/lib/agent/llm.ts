@@ -24,7 +24,6 @@ function configFromEnv(): Record<string, string> | null {
     apiKey,
     ...(process.env.ZAI_TOKEN ? { token: process.env.ZAI_TOKEN } : {}),
     ...(process.env.ZAI_USER_ID ? { userId: process.env.ZAI_USER_ID } : {}),
-    ...(process.env.ZAI_CHAT_ID ? { chatId: process.env.ZAI_CHAT_ID } : {}),
   };
 }
 
