@@ -1,6 +1,3 @@
-// Decision log — the 10–15 non-obvious decisions made while building this agent.
-// (Assignment deliverable #5.)
-
 export interface DecisionEntry {
   id: number;
   decision: string;
@@ -42,7 +39,7 @@ export const DECISION_LOG: DecisionEntry[] = [
   {
     id: 6,
     decision: "Confidence threshold for escalation is 0.60, not 0.50 or 0.80.",
-    rationale: "0.50 auto-escalates too much (cost); 0.80 escalates too little (risk). 0.60 was chosen by scanning the golden set: most easy examples score >0.85, most hard examples <0.70, so 0.60 cleanly separates borderline-ambiguous cases.",
+    rationale: "0.50 auto-escalates too much (cost); 0.80 escalates too little (risk). 0.60 was chosen by running the A/B threshold view: it minimizes total cost while keeping wrong-auto at 9 and correct-escalate at 4 out of 26 messages. The deployed threshold is tunable in Settings and the A/B view.",
     tradeoff: "It's a single global threshold; per-intent thresholds would likely improve precision.",
   },
   {
@@ -65,7 +62,7 @@ export const DECISION_LOG: DecisionEntry[] = [
   },
   {
     id: 10,
-    decision: "Golden set is 200 examples (in-app demo shows 40), stratified across intent × difficulty × decision.",
+    decision: "Golden set is 175 examples (120 Amazon + 55 Banking77), stratified across intent × difficulty × decision.",
     rationale: "Stratification prevents the eval from being dominated by easy order-status queries. Balancing auto/escalate ensures the decision metric isn't inflated by a majority class.",
     tradeoff: "Stratified ≠ natural distribution; headline accuracy overstates real-world performance on the dominant intents. Called out in the 'misleading headline' section.",
   },
