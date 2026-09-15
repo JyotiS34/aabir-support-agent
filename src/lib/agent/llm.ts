@@ -1,12 +1,55 @@
-// LLM helper: thin wrapper around z-ai-web-dev-sdk with JSON parsing + retries.
-// Server-side ONLY.
-
 import ZAI from "z-ai-web-dev-sdk";
+import { promises as fs } from "fs";
+import path from "path";
+import os from "os";
 
 let zaiInstance: Awaited<ReturnType<typeof ZAI.create>> | null = null;
 
+function configFromEnv(): Record<string, string> | null {
+  const fullConfig = process.env.ZAI_CONFIG;
+  if (fullConfig) {
+    try {
+      const parsed = JSON.parse(fullConfig);
+      if (parsed.baseUrl && parsed.apiKey) return parsed;
+    } catch {
+      // invalid JSON, fall through
+    }
+  }
+  // Option 2: Separate env vars (also supported if your platform allows multiple)
+  const baseUrl = process.env.ZAI_BASE_URL;
+  const apiKey = process.env.ZAI_API_KEY;
+  if (!baseUrl || !apiKey) return null;
+  return {
+    baseUrl,
+    apiKey,
+    ...(process.env.ZAI_TOKEN ? { token: process.env.ZAI_TOKEN } : {}),
+    ...(process.env.ZAI_USER_ID ? { userId: process.env.ZAI_USER_ID } : {}),
+    ...(process.env.ZAI_CHAT_ID ? { chatId: process.env.ZAI_CHAT_ID } : {}),
+  };
+}
+
+// Write env-based config to a temp .z-ai-config file so the SDK can read it
+async function ensureConfigFile(): Promise<void> {
+  const envConfig = configFromEnv();
+  if (!envConfig) return; // no env vars → SDK will look for the file itself
+
+  // Write to project root so the SDK finds it
+  const configPath = path.join(process.cwd(), ".z-ai-config");
+  try {
+    await fs.writeFile(configPath, JSON.stringify(envConfig, null, 2), "utf-8");
+  } catch {
+    // If we can't write to cwd (e.g., read-only filesystem), try /tmp
+    const tmpPath = "/tmp/.z-ai-config";
+    await fs.writeFile(tmpPath, JSON.stringify(envConfig, null, 2), "utf-8");
+    // Set HOME to /tmp so the SDK finds it there
+    process.env.HOME = "/tmp";
+  }
+}
+
 export async function getLLM() {
   if (!zaiInstance) {
+    // If env vars are set, write a config file from them before the SDK loads
+    await ensureConfigFile();
     zaiInstance = await ZAI.create();
   }
   return zaiInstance;
