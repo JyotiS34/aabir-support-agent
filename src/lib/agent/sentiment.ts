@@ -1,16 +1,3 @@
-// Fine-tuned sentiment classifier — aabir-sentiment-v1.
-//
-// In production this would be a small BERT/RoBERTa model fine-tuned on
-// customer-support-tweet sentiment labels. Here it's implemented as a
-// prompt-engineered classifier with curated few-shot examples that emulate
-// the fine-tuned model's decision boundary. It runs the LLM with a tightly
-// scoped system prompt + few-shot exemplars, returning a calibrated label.
-//
-// Output: a 5-level sentiment + a 0-1 intensity score, which feeds the
-// escalation decision (high negative sentiment → escalation bias).
-//
-// SERVER-ONLY: imports the z-ai-web-dev-sdk via ./llm.
-
 export * from "./sentiment-types";
 
 import { llmComplete, extractJson } from "./llm";
