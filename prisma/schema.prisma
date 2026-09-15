@@ -1,0 +1,69 @@
+// Prisma schema for Hiver AI Support Agent SaaS
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// A customer support conversation (tweet thread)
+model Conversation {
+  id           String   @id @default(cuid())
+  tweetId      String   @unique
+  customerHandle String
+  customerName String
+  brandHandle  String
+  message      String
+  threadContext String? // previous tweets in the thread, JSON array
+  createdAt    DateTime @default(now())
+  occurredAt   DateTime
+  status       String   @default("pending") // pending | analyzed | escalated | auto-handled
+  analyses     Analysis[]
+}
+
+// An agent analysis result for a conversation
+model Analysis {
+  id             String   @id @default(cuid())
+  conversationId String
+  conversation   Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  intent         String
+  intentConfidence Float
+  intentReasoning String
+  draftReply     String
+  draftConfidence Float
+  decision       String   // auto-handle | escalate
+  decisionReason String
+  escalationSignals String // JSON array of signals
+  modelId        String
+  latencyMs      Int
+  createdAt      DateTime @default(now())
+}
+
+// Golden evaluation set examples (hand-labelled)
+model GoldenExample {
+  id             String   @id @default(cuid())
+  message        String
+  expectedIntent String
+  expectedDecision String // auto-handle | escalate
+  note           String?  // why this label
+  difficulty     String   @default("easy") // easy | medium | hard
+  createdAt      DateTime @default(now())
+}
+
+// An evaluation run result
+model EvalRun {
+  id             String   @id @default(cuid())
+  name           String
+  intentAccuracy Float
+  decisionAccuracy Float
+  judgeAgreement Float
+  autoHandleRate Float
+  avgLatencyMs   Int
+  sampleSize     Int
+  baseline       String   @default("agent") // agent | trivial | keyword
+  resultsJson    String   // JSON array of per-example results
+  createdAt      DateTime @default(now())
+}

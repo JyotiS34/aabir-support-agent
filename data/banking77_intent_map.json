@@ -1,0 +1,387 @@
+[
+  {
+    "banking77_intent": "Refund_not_showing_up",
+    "app_intent": "refund_request",
+    "examples": 202
+  },
+  {
+    "banking77_intent": "activate_my_card",
+    "app_intent": "return_request",
+    "examples": 199
+  },
+  {
+    "banking77_intent": "age_limit",
+    "app_intent": "prime_membership",
+    "examples": 150
+  },
+  {
+    "banking77_intent": "apple_pay_or_google_pay",
+    "app_intent": "prime_membership",
+    "examples": 166
+  },
+  {
+    "banking77_intent": "atm_support",
+    "app_intent": "product_question",
+    "examples": 127
+  },
+  {
+    "banking77_intent": "automatic_top_up",
+    "app_intent": "return_request",
+    "examples": 167
+  },
+  {
+    "banking77_intent": "balance_not_updated_after_bank_transfer",
+    "app_intent": "order_status",
+    "examples": 211
+  },
+  {
+    "banking77_intent": "balance_not_updated_after_cheque_or_cash_deposit",
+    "app_intent": "order_status",
+    "examples": 221
+  },
+  {
+    "banking77_intent": "beneficiary_not_allowed",
+    "app_intent": "cancel_order",
+    "examples": 196
+  },
+  {
+    "banking77_intent": "cancel_transfer",
+    "app_intent": "cancel_order",
+    "examples": 197
+  },
+  {
+    "banking77_intent": "card_about_to_expire",
+    "app_intent": "return_request",
+    "examples": 169
+  },
+  {
+    "banking77_intent": "card_acceptance",
+    "app_intent": "return_request",
+    "examples": 99
+  },
+  {
+    "banking77_intent": "card_arrival",
+    "app_intent": "delivery_delay",
+    "examples": 193
+  },
+  {
+    "banking77_intent": "card_delivery_estimate",
+    "app_intent": "delivery_delay",
+    "examples": 152
+  },
+  {
+    "banking77_intent": "card_linking",
+    "app_intent": "return_request",
+    "examples": 179
+  },
+  {
+    "banking77_intent": "card_not_working",
+    "app_intent": "damaged_defective",
+    "examples": 152
+  },
+  {
+    "banking77_intent": "card_payment_fee_charged",
+    "app_intent": "payment_issue",
+    "examples": 227
+  },
+  {
+    "banking77_intent": "card_payment_not_recognised",
+    "app_intent": "payment_issue",
+    "examples": 208
+  },
+  {
+    "banking77_intent": "card_payment_wrong_exchange_rate",
+    "app_intent": "payment_issue",
+    "examples": 207
+  },
+  {
+    "banking77_intent": "card_swallowed",
+    "app_intent": "damaged_defective",
+    "examples": 101
+  },
+  {
+    "banking77_intent": "cash_withdrawal_charge",
+    "app_intent": "payment_issue",
+    "examples": 217
+  },
+  {
+    "banking77_intent": "cash_withdrawal_not_recognised",
+    "app_intent": "payment_issue",
+    "examples": 200
+  },
+  {
+    "banking77_intent": "change_pin",
+    "app_intent": "account_access",
+    "examples": 162
+  },
+  {
+    "banking77_intent": "compromised_card",
+    "app_intent": "damaged_defective",
+    "examples": 126
+  },
+  {
+    "banking77_intent": "contactless_not_working",
+    "app_intent": "damaged_defective",
+    "examples": 75
+  },
+  {
+    "banking77_intent": "country_support",
+    "app_intent": "prime_membership",
+    "examples": 169
+  },
+  {
+    "banking77_intent": "declined_card_payment",
+    "app_intent": "payment_issue",
+    "examples": 193
+  },
+  {
+    "banking77_intent": "declined_cash_withdrawal",
+    "app_intent": "payment_issue",
+    "examples": 213
+  },
+  {
+    "banking77_intent": "declined_transfer",
+    "app_intent": "payment_issue",
+    "examples": 173
+  },
+  {
+    "banking77_intent": "direct_debit_payment_not_recognised",
+    "app_intent": "payment_issue",
+    "examples": 222
+  },
+  {
+    "banking77_intent": "disposable_card_limits",
+    "app_intent": "return_request",
+    "examples": 161
+  },
+  {
+    "banking77_intent": "edit_personal_details",
+    "app_intent": "account_access",
+    "examples": 161
+  },
+  {
+    "banking77_intent": "exchange_charge",
+    "app_intent": "payment_issue",
+    "examples": 161
+  },
+  {
+    "banking77_intent": "exchange_rate",
+    "app_intent": "product_question",
+    "examples": 152
+  },
+  {
+    "banking77_intent": "exchange_via_app",
+    "app_intent": "app_website_bug",
+    "examples": 158
+  },
+  {
+    "banking77_intent": "extra_charge_on_statement",
+    "app_intent": "payment_issue",
+    "examples": 206
+  },
+  {
+    "banking77_intent": "failed_transfer",
+    "app_intent": "order_status",
+    "examples": 177
+  },
+  {
+    "banking77_intent": "fiat_currency_support",
+    "app_intent": "prime_membership",
+    "examples": 166
+  },
+  {
+    "banking77_intent": "get_disposable_virtual_card",
+    "app_intent": "return_request",
+    "examples": 137
+  },
+  {
+    "banking77_intent": "get_physical_card",
+    "app_intent": "return_request",
+    "examples": 146
+  },
+  {
+    "banking77_intent": "getting_spare_card",
+    "app_intent": "return_request",
+    "examples": 169
+  },
+  {
+    "banking77_intent": "getting_virtual_card",
+    "app_intent": "return_request",
+    "examples": 138
+  },
+  {
+    "banking77_intent": "lost_or_stolen_card",
+    "app_intent": "damaged_defective",
+    "examples": 122
+  },
+  {
+    "banking77_intent": "lost_or_stolen_phone",
+    "app_intent": "account_access",
+    "examples": 161
+  },
+  {
+    "banking77_intent": "order_physical_card",
+    "app_intent": "return_request",
+    "examples": 160
+  },
+  {
+    "banking77_intent": "passcode_forgotten",
+    "app_intent": "account_access",
+    "examples": 145
+  },
+  {
+    "banking77_intent": "pending_card_payment",
+    "app_intent": "order_status",
+    "examples": 199
+  },
+  {
+    "banking77_intent": "pending_cash_withdrawal",
+    "app_intent": "order_status",
+    "examples": 183
+  },
+  {
+    "banking77_intent": "pending_top_up",
+    "app_intent": "order_status",
+    "examples": 189
+  },
+  {
+    "banking77_intent": "pending_transfer",
+    "app_intent": "order_status",
+    "examples": 188
+  },
+  {
+    "banking77_intent": "pin_blocked",
+    "app_intent": "account_access",
+    "examples": 155
+  },
+  {
+    "banking77_intent": "receiving_money",
+    "app_intent": "order_status",
+    "examples": 135
+  },
+  {
+    "banking77_intent": "request_refund",
+    "app_intent": "refund_request",
+    "examples": 209
+  },
+  {
+    "banking77_intent": "reverted_card_payment?",
+    "app_intent": "refund_request",
+    "examples": 201
+  },
+  {
+    "banking77_intent": "supported_cards_and_currencies",
+    "app_intent": "prime_membership",
+    "examples": 169
+  },
+  {
+    "banking77_intent": "terminate_account",
+    "app_intent": "account_access",
+    "examples": 148
+  },
+  {
+    "banking77_intent": "top_up_by_bank_transfer_charge",
+    "app_intent": "return_request",
+    "examples": 151
+  },
+  {
+    "banking77_intent": "top_up_by_card_charge",
+    "app_intent": "return_request",
+    "examples": 154
+  },
+  {
+    "banking77_intent": "top_up_by_cash_or_cheque",
+    "app_intent": "return_request",
+    "examples": 154
+  },
+  {
+    "banking77_intent": "top_up_failed",
+    "app_intent": "payment_issue",
+    "examples": 185
+  },
+  {
+    "banking77_intent": "top_up_limits",
+    "app_intent": "return_request",
+    "examples": 137
+  },
+  {
+    "banking77_intent": "top_up_reverted",
+    "app_intent": "payment_issue",
+    "examples": 186
+  },
+  {
+    "banking77_intent": "topping_up_by_card",
+    "app_intent": "return_request",
+    "examples": 143
+  },
+  {
+    "banking77_intent": "transaction_charged_twice",
+    "app_intent": "payment_issue",
+    "examples": 215
+  },
+  {
+    "banking77_intent": "transfer_fee_charged",
+    "app_intent": "payment_issue",
+    "examples": 212
+  },
+  {
+    "banking77_intent": "transfer_into_account",
+    "app_intent": "order_status",
+    "examples": 153
+  },
+  {
+    "banking77_intent": "transfer_not_received_by_recipient",
+    "app_intent": "order_status",
+    "examples": 211
+  },
+  {
+    "banking77_intent": "transfer_timing",
+    "app_intent": "delivery_delay",
+    "examples": 168
+  },
+  {
+    "banking77_intent": "unable_to_verify_identity",
+    "app_intent": "account_access",
+    "examples": 142
+  },
+  {
+    "banking77_intent": "verify_my_identity",
+    "app_intent": "account_access",
+    "examples": 144
+  },
+  {
+    "banking77_intent": "verify_source_of_funds",
+    "app_intent": "account_access",
+    "examples": 153
+  },
+  {
+    "banking77_intent": "verify_top_up",
+    "app_intent": "return_request",
+    "examples": 166
+  },
+  {
+    "banking77_intent": "virtual_card_not_working",
+    "app_intent": "damaged_defective",
+    "examples": 81
+  },
+  {
+    "banking77_intent": "visa_or_mastercard",
+    "app_intent": "prime_membership",
+    "examples": 175
+  },
+  {
+    "banking77_intent": "why_verify_identity",
+    "app_intent": "account_access",
+    "examples": 161
+  },
+  {
+    "banking77_intent": "wrong_amount_of_cash_received",
+    "app_intent": "payment_issue",
+    "examples": 220
+  },
+  {
+    "banking77_intent": "wrong_exchange_rate_for_cash_withdrawal",
+    "app_intent": "payment_issue",
+    "examples": 203
+  }
+]

@@ -1,0 +1,552 @@
+[
+  {
+    "id": "b77-055",
+    "message": "I'm due a refund and it is not on my statement.",
+    "expectedIntent": "refund_request",
+    "expectedDecision": "escalate",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'Refund_not_showing_up' mapped to app intent 'refund_request'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "Refund_not_showing_up"
+  },
+  {
+    "id": "b77-047",
+    "message": "Let me know the steps for the identity checks",
+    "expectedIntent": "account_access",
+    "expectedDecision": "escalate",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'verify_my_identity' mapped to app intent 'account_access'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "verify_my_identity"
+  },
+  {
+    "id": "b77-013",
+    "message": "Where does the exchange rate stand right now?",
+    "expectedIntent": "product_question",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'exchange_rate' mapped to app intent 'product_question'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "exchange_rate"
+  },
+  {
+    "id": "b77-019",
+    "message": "Why is the exchange rate different than expected on my transaction?",
+    "expectedIntent": "payment_issue",
+    "expectedDecision": "escalate",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'wrong_exchange_rate_for_cash_withdrawal' mapped to app intent 'payment_issue'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "wrong_exchange_rate_for_cash_withdrawal"
+  },
+  {
+    "id": "b77-040",
+    "message": "Why isn't my disposable virtual card working?",
+    "expectedIntent": "damaged_defective",
+    "expectedDecision": "escalate",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'virtual_card_not_working' mapped to app intent 'damaged_defective'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "virtual_card_not_working"
+  },
+  {
+    "id": "b77-044",
+    "message": "Your service is terrible,.  Delete my account,",
+    "expectedIntent": "account_access",
+    "expectedDecision": "escalate",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'terminate_account' mapped to app intent 'account_access'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "terminate_account"
+  },
+  {
+    "id": "b77-036",
+    "message": "Should I order a new card before I freeze my original one?",
+    "expectedIntent": "damaged_defective",
+    "expectedDecision": "escalate",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'compromised_card' mapped to app intent 'damaged_defective'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "compromised_card"
+  },
+  {
+    "id": "b77-028",
+    "message": "Why is my balance the same?  I processed a transfer.",
+    "expectedIntent": "order_status",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'balance_not_updated_after_bank_transfer' mapped to app intent 'order_status'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "balance_not_updated_after_bank_transfer"
+  },
+  {
+    "id": "b77-024",
+    "message": "What is going on with my cash deposit. I'm looking at my account balance and it is not there. It has been almost a week. Someone better get back to me asap.",
+    "expectedIntent": "order_status",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'balance_not_updated_after_cheque_or_cash_deposit' mapped to app intent 'order_status'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "balance_not_updated_after_cheque_or_cash_deposit"
+  },
+  {
+    "id": "b77-049",
+    "message": "I need my PIN unlocked.",
+    "expectedIntent": "account_access",
+    "expectedDecision": "escalate",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'pin_blocked' mapped to app intent 'account_access'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "pin_blocked"
+  },
+  {
+    "id": "b77-017",
+    "message": "Can you explain why the ATM is giving me less money than what I asked for?",
+    "expectedIntent": "payment_issue",
+    "expectedDecision": "escalate",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'wrong_amount_of_cash_received' mapped to app intent 'payment_issue'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "wrong_amount_of_cash_received"
+  },
+  {
+    "id": "b77-043",
+    "message": "May I change my PIN?",
+    "expectedIntent": "account_access",
+    "expectedDecision": "escalate",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'change_pin' mapped to app intent 'account_access'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "change_pin"
+  },
+  {
+    "id": "b77-029",
+    "message": "The recipient can not locate funds.",
+    "expectedIntent": "order_status",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'transfer_not_received_by_recipient' mapped to app intent 'order_status'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "transfer_not_received_by_recipient"
+  },
+  {
+    "id": "b77-025",
+    "message": "Hey, I tried to withdraw some cash earlier and it's saying it's pending? Will I be charged for this?",
+    "expectedIntent": "order_status",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'pending_cash_withdrawal' mapped to app intent 'order_status'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "pending_cash_withdrawal"
+  },
+  {
+    "id": "b77-014",
+    "message": "I wanted to buy something online yesterday, but I could not because the card got declined on the day of and the following day. What is wrong with the card?",
+    "expectedIntent": "payment_issue",
+    "expectedDecision": "escalate",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'declined_transfer' mapped to app intent 'payment_issue'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "declined_transfer"
+  },
+  {
+    "id": "b77-011",
+    "message": "How much are the fees for adding funds using an international card?",
+    "expectedIntent": "return_request",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'top_up_by_card_charge' mapped to app intent 'return_request'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "top_up_by_card_charge"
+  },
+  {
+    "id": "b77-030",
+    "message": "Can I get a Visa from you?",
+    "expectedIntent": "prime_membership",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'visa_or_mastercard' mapped to app intent 'prime_membership'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "visa_or_mastercard"
+  },
+  {
+    "id": "b77-045",
+    "message": "Is it really necessary to verify my Identity?",
+    "expectedIntent": "account_access",
+    "expectedDecision": "escalate",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'why_verify_identity' mapped to app intent 'account_access'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "why_verify_identity"
+  },
+  {
+    "id": "b77-048",
+    "message": "My phone was stolen, what should I do?",
+    "expectedIntent": "account_access",
+    "expectedDecision": "escalate",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'lost_or_stolen_phone' mapped to app intent 'account_access'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "lost_or_stolen_phone"
+  },
+  {
+    "id": "b77-046",
+    "message": "How do I find out where my funds came from?",
+    "expectedIntent": "account_access",
+    "expectedDecision": "escalate",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'verify_source_of_funds' mapped to app intent 'account_access'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "verify_source_of_funds"
+  },
+  {
+    "id": "b77-008",
+    "message": "I want to do a cash top-up",
+    "expectedIntent": "return_request",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'top_up_by_cash_or_cheque' mapped to app intent 'return_request'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "top_up_by_cash_or_cheque"
+  },
+  {
+    "id": "b77-001",
+    "message": "How long does it take for cards to be delivered after ordering them?",
+    "expectedIntent": "delivery_delay",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'card_delivery_estimate' mapped to app intent 'delivery_delay'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "card_delivery_estimate"
+  },
+  {
+    "id": "b77-050",
+    "message": "Need a new passcode.",
+    "expectedIntent": "account_access",
+    "expectedDecision": "escalate",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'passcode_forgotten' mapped to app intent 'account_access'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "passcode_forgotten"
+  },
+  {
+    "id": "b77-041",
+    "message": "How do I deal with a stolen card?",
+    "expectedIntent": "damaged_defective",
+    "expectedDecision": "escalate",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'lost_or_stolen_card' mapped to app intent 'damaged_defective'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "lost_or_stolen_card"
+  },
+  {
+    "id": "b77-012",
+    "message": "\nWhere can I withdraw money from?",
+    "expectedIntent": "product_question",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'atm_support' mapped to app intent 'product_question'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "atm_support"
+  },
+  {
+    "id": "b77-033",
+    "message": "I got my American Express in Apple Pay, why is top up not working?",
+    "expectedIntent": "prime_membership",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'apple_pay_or_google_pay' mapped to app intent 'prime_membership'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "apple_pay_or_google_pay"
+  },
+  {
+    "id": "b77-051",
+    "message": "Is it possible for a transaction to be cancelled?",
+    "expectedIntent": "cancel_order",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'cancel_transfer' mapped to app intent 'cancel_order'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "cancel_transfer"
+  },
+  {
+    "id": "b77-016",
+    "message": "Why have I been charged more than once for the same transaction?",
+    "expectedIntent": "payment_issue",
+    "expectedDecision": "escalate",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'transaction_charged_twice' mapped to app intent 'payment_issue'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "transaction_charged_twice"
+  },
+  {
+    "id": "b77-015",
+    "message": "I shouldn't be charged any fee for transferring .",
+    "expectedIntent": "payment_issue",
+    "expectedDecision": "escalate",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'transfer_fee_charged' mapped to app intent 'payment_issue'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "transfer_fee_charged"
+  },
+  {
+    "id": "b77-038",
+    "message": "My card won't work at all for anything.",
+    "expectedIntent": "damaged_defective",
+    "expectedDecision": "escalate",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'card_not_working' mapped to app intent 'damaged_defective'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "card_not_working"
+  },
+  {
+    "id": "b77-010",
+    "message": "Can I keep using my card after it expires?",
+    "expectedIntent": "return_request",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'card_about_to_expire' mapped to app intent 'return_request'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "card_about_to_expire"
+  },
+  {
+    "id": "b77-037",
+    "message": "The ATM machine ate my card.",
+    "expectedIntent": "damaged_defective",
+    "expectedDecision": "escalate",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'card_swallowed' mapped to app intent 'damaged_defective'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "card_swallowed"
+  },
+  {
+    "id": "b77-004",
+    "message": "Where can I find my PIN?",
+    "expectedIntent": "return_request",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'get_physical_card' mapped to app intent 'return_request'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "get_physical_card"
+  },
+  {
+    "id": "b77-032",
+    "message": "Which forms of currency are accepted?",
+    "expectedIntent": "prime_membership",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'supported_cards_and_currencies' mapped to app intent 'prime_membership'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "supported_cards_and_currencies"
+  },
+  {
+    "id": "b77-039",
+    "message": "When I tried to pay for my bus ride, the contactless payment wouldn't work. How can I prevent this in the future?",
+    "expectedIntent": "damaged_defective",
+    "expectedDecision": "escalate",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'contactless_not_working' mapped to app intent 'damaged_defective'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "contactless_not_working"
+  },
+  {
+    "id": "b77-006",
+    "message": "Please tell me how disposable virtual cards work?",
+    "expectedIntent": "return_request",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'get_disposable_virtual_card' mapped to app intent 'return_request'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "get_disposable_virtual_card"
+  },
+  {
+    "id": "b77-053",
+    "message": "I changed my mind on something I purchased through you and I need the transaction canceled and a refund as soon as possible. Can you help me please?",
+    "expectedIntent": "refund_request",
+    "expectedDecision": "escalate",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'request_refund' mapped to app intent 'refund_request'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "request_refund"
+  },
+  {
+    "id": "b77-023",
+    "message": "I want to transfer money into my account, what do I do?",
+    "expectedIntent": "order_status",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'transfer_into_account' mapped to app intent 'order_status'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "transfer_into_account"
+  },
+  {
+    "id": "b77-021",
+    "message": "How do I dispute a debit that I didn't make?",
+    "expectedIntent": "payment_issue",
+    "expectedDecision": "escalate",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'direct_debit_payment_not_recognised' mapped to app intent 'payment_issue'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "direct_debit_payment_not_recognised"
+  },
+  {
+    "id": "b77-018",
+    "message": "I bought something in a foreign currency but the rate applied is wrong!",
+    "expectedIntent": "payment_issue",
+    "expectedDecision": "escalate",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'card_payment_wrong_exchange_rate' mapped to app intent 'payment_issue'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "card_payment_wrong_exchange_rate"
+  },
+  {
+    "id": "b77-020",
+    "message": "I can't get money out of the ATM. Is my card actually working? It's the first time I tried using it",
+    "expectedIntent": "payment_issue",
+    "expectedDecision": "escalate",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'declined_cash_withdrawal' mapped to app intent 'payment_issue'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "declined_cash_withdrawal"
+  },
+  {
+    "id": "b77-027",
+    "message": "Your top-up function isn't working, it still says pending even though I know my card works.",
+    "expectedIntent": "order_status",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'pending_top_up' mapped to app intent 'order_status'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "pending_top_up"
+  },
+  {
+    "id": "b77-007",
+    "message": "How much does it cost to do a transfer?",
+    "expectedIntent": "return_request",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'top_up_by_bank_transfer_charge' mapped to app intent 'return_request'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "top_up_by_bank_transfer_charge"
+  },
+  {
+    "id": "b77-031",
+    "message": "When considering currency holdings and exchanges, what fiat currencies are supported?",
+    "expectedIntent": "prime_membership",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'fiat_currency_support' mapped to app intent 'prime_membership'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "fiat_currency_support"
+  },
+  {
+    "id": "b77-005",
+    "message": "When I top up what are the amoutn limits.",
+    "expectedIntent": "return_request",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'top_up_limits' mapped to app intent 'return_request'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "top_up_limits"
+  },
+  {
+    "id": "b77-002",
+    "message": "When will my transfer from the US get here?",
+    "expectedIntent": "delivery_delay",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'transfer_timing' mapped to app intent 'delivery_delay'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "transfer_timing"
+  },
+  {
+    "id": "b77-042",
+    "message": "what currencies can i exchange between on your app?",
+    "expectedIntent": "app_website_bug",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'exchange_via_app' mapped to app intent 'app_website_bug'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "exchange_via_app"
+  },
+  {
+    "id": "b77-022",
+    "message": "How do I get my paycheck through this?",
+    "expectedIntent": "order_status",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'receiving_money' mapped to app intent 'order_status'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "receiving_money"
+  },
+  {
+    "id": "b77-052",
+    "message": "My attempted transfer keeps kicking back with an error message.  Could you please help me to resolve this?",
+    "expectedIntent": "cancel_order",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'beneficiary_not_allowed' mapped to app intent 'cancel_order'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "beneficiary_not_allowed"
+  },
+  {
+    "id": "b77-034",
+    "message": "What age do my kids need to be to use your service?",
+    "expectedIntent": "prime_membership",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'age_limit' mapped to app intent 'prime_membership'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "age_limit"
+  },
+  {
+    "id": "b77-035",
+    "message": "What are the countries you have offices in?",
+    "expectedIntent": "prime_membership",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'country_support' mapped to app intent 'prime_membership'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "country_support"
+  },
+  {
+    "id": "b77-003",
+    "message": "Am I able to track a card that has already been sent?",
+    "expectedIntent": "delivery_delay",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'card_arrival' mapped to app intent 'delivery_delay'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "card_arrival"
+  },
+  {
+    "id": "b77-026",
+    "message": "How long can an EU transfer take?",
+    "expectedIntent": "order_status",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'pending_transfer' mapped to app intent 'order_status'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "pending_transfer"
+  },
+  {
+    "id": "b77-054",
+    "message": "My card payment was cancelled.",
+    "expectedIntent": "refund_request",
+    "expectedDecision": "escalate",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'reverted_card_payment?' mapped to app intent 'refund_request'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "reverted_card_payment?"
+  },
+  {
+    "id": "b77-009",
+    "message": "I tried to top off using the card, but the money just disappeared?",
+    "expectedIntent": "return_request",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Banking77 intent 'topping_up_by_card' mapped to app intent 'return_request'. Cross-domain example — banking query classified against the retail-support taxonomy. Each mapping was reviewed for semantic fit.",
+    "source": "banking77",
+    "b77Intent": "topping_up_by_card"
+  }
+]

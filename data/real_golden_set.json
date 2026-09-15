@@ -1,0 +1,1082 @@
+[
+  {
+    "id": "rg-084",
+    "tweetId": "122772",
+    "message": "Y así fue, no me ha llegado el paquete en todo el día. Pagar Prime para esto..",
+    "expectedIntent": "prime_membership",
+    "expectedDecision": "auto-handle",
+    "difficulty": "easy",
+    "note": "Sampled from real @AmazonHelp tweet (id 122772). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-072",
+    "tweetId": "2748310",
+    "message": "can you help I received an email saying I need to revise my payment method on items I purchased but I have checked my online banking and I have been charged already for the items??",
+    "expectedIntent": "payment_issue",
+    "expectedDecision": "escalate",
+    "difficulty": "medium",
+    "note": "Sampled from real @AmazonHelp tweet (id 2748310). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-112",
+    "tweetId": "1313416",
+    "message": "That's just it I want a replacement. Not just a return because I really need the item for my collection",
+    "expectedIntent": "return_request",
+    "expectedDecision": "auto-handle",
+    "difficulty": "medium",
+    "note": "Sampled from real @AmazonHelp tweet (id 1313416). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-087",
+    "tweetId": "1699753",
+    "message": "Prime Photos is stuck at 100 and does not want to back up items any more.",
+    "expectedIntent": "prime_membership",
+    "expectedDecision": "auto-handle",
+    "difficulty": "easy",
+    "note": "Sampled from real @AmazonHelp tweet (id 1699753). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-027",
+    "tweetId": "727618",
+    "message": "I have done the needful. Please resolve this issue else i will be forced to cancel my order",
+    "expectedIntent": "cancel_order",
+    "expectedDecision": "auto-handle",
+    "difficulty": "easy",
+    "note": "Sampled from real @AmazonHelp tweet (id 727618). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-104",
+    "tweetId": "1438223",
+    "message": "order no 171-0715862-4786724 I need refund or replacement",
+    "expectedIntent": "refund_request",
+    "expectedDecision": "escalate",
+    "difficulty": "easy",
+    "note": "Sampled from real @AmazonHelp tweet (id 1438223). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-066",
+    "tweetId": "455541",
+    "message": "could really use some help from someone that can actually do something. Prime member. Delivery promised yesterday. Didn’t happen. I’m gone now until Monday and paper product is out for delivery. Was a gift for this weekend.",
+    "expectedIntent": "order_status",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Sampled from real @AmazonHelp tweet (id 455541). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-003",
+    "tweetId": "2280463",
+    "message": "Yes i have now reset my password will keep an eye on it and make sure no more prime membership emails are sent",
+    "expectedIntent": "account_access",
+    "expectedDecision": "escalate",
+    "difficulty": "hard",
+    "note": "Sampled from real @AmazonHelp tweet (id 2280463). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-071",
+    "tweetId": "979389",
+    "message": "Yes, thankfully I won't be charged for it.",
+    "expectedIntent": "payment_issue",
+    "expectedDecision": "escalate",
+    "difficulty": "easy",
+    "note": "Sampled from real @AmazonHelp tweet (id 979389). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-089",
+    "tweetId": "950909",
+    "message": "Y otra duda, cuesta tanto versión en castellano de app y web de prime vídeo ?",
+    "expectedIntent": "prime_membership",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Sampled from real @AmazonHelp tweet (id 950909). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-093",
+    "tweetId": "556997",
+    "message": "Is it possible to hold 40000",
+    "expectedIntent": "product_question",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Sampled from real @AmazonHelp tweet (id 556997). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-056",
+    "tweetId": "517553",
+    "message": "I need someone that will actually resolve the issue instead of just doing the bare minimum. I’m not sure if I should just dispute the charges with or file a complaint with the",
+    "expectedIntent": "general_complaint",
+    "expectedDecision": "escalate",
+    "difficulty": "hard",
+    "note": "Sampled from real @AmazonHelp tweet (id 517553). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-101",
+    "tweetId": "2329613",
+    "message": "But refund was supposed to be issued by amazon. Tel cust serv promised and didn’t issue",
+    "expectedIntent": "refund_request",
+    "expectedDecision": "escalate",
+    "difficulty": "easy",
+    "note": "Sampled from real @AmazonHelp tweet (id 2329613). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-011",
+    "tweetId": "435131",
+    "message": "What about the Nest Cam IQ? The product listing was on your site last night and today it’s gone.",
+    "expectedIntent": "app_website_bug",
+    "expectedDecision": "auto-handle",
+    "difficulty": "easy",
+    "note": "Sampled from real @AmazonHelp tweet (id 435131). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-029",
+    "tweetId": "1581984",
+    "message": "I saw the package I don’t understand why he didn’t bring it to the door can you please explain this. This is making me want to cancel prime",
+    "expectedIntent": "cancel_order",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Sampled from real @AmazonHelp tweet (id 1581984). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-064",
+    "tweetId": "2434858",
+    "message": "Had message yesterday saying out for delivery and again today, app says the same?",
+    "expectedIntent": "order_status",
+    "expectedDecision": "auto-handle",
+    "difficulty": "easy",
+    "note": "Sampled from real @AmazonHelp tweet (id 2434858). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-103",
+    "tweetId": "595613",
+    "message": "I don’t want to return the package however I would like a refund for the cost of the delivery.",
+    "expectedIntent": "refund_request",
+    "expectedDecision": "escalate",
+    "difficulty": "hard",
+    "note": "Sampled from real @AmazonHelp tweet (id 595613). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-118",
+    "tweetId": "2681319",
+    "message": "You have wasted my time if you cannot deliver what you show then kindly reject the order that's much better . Arrange a return pick up",
+    "expectedIntent": "return_request",
+    "expectedDecision": "auto-handle",
+    "difficulty": "medium",
+    "note": "Sampled from real @AmazonHelp tweet (id 2681319). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-120",
+    "tweetId": "2119263",
+    "message": "The item was returned to Amazon and yes I do.",
+    "expectedIntent": "return_request",
+    "expectedDecision": "auto-handle",
+    "difficulty": "easy",
+    "note": "Sampled from real @AmazonHelp tweet (id 2119263). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-002",
+    "tweetId": "449932",
+    "message": "hi. My account got locked and I faxed a statement + details 3-4 days ago. Can I check you received the fax please?",
+    "expectedIntent": "account_access",
+    "expectedDecision": "escalate",
+    "difficulty": "medium",
+    "note": "Sampled from real @AmazonHelp tweet (id 449932). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-065",
+    "tweetId": "1495203",
+    "message": "Here it says it will be w business day before they tell me when it’s dispatched and that the money won’t come out my account when it has",
+    "expectedIntent": "order_status",
+    "expectedDecision": "auto-handle",
+    "difficulty": "medium",
+    "note": "Sampled from real @AmazonHelp tweet (id 1495203). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-069",
+    "tweetId": "1574283",
+    "message": "sorry i cannot. Amazon running prime fraud and just cheating customers.it is not yet out for delivery. I am cancelling all orders.",
+    "expectedIntent": "order_status",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Sampled from real @AmazonHelp tweet (id 1574283). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-099",
+    "tweetId": "2283976",
+    "message": "I have a defective item that I need to return. Quiklok ql742 keyboard stand, however I don't have the box anymore. Would a return still be accepted. Can I get a refund without returning?",
+    "expectedIntent": "product_question",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Sampled from real @AmazonHelp tweet (id 2283976). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-090",
+    "tweetId": "2665834",
+    "message": "In the last year alone, I’ve spent $5780.26 on Not counting Prime Membership or Xbox One purchase.",
+    "expectedIntent": "prime_membership",
+    "expectedDecision": "auto-handle",
+    "difficulty": "easy",
+    "note": "Sampled from real @AmazonHelp tweet (id 2665834). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-110",
+    "tweetId": "722517",
+    "message": "Hahah oh u guys refunded me so it was free! Thank you for being awesome!",
+    "expectedIntent": "refund_request",
+    "expectedDecision": "escalate",
+    "difficulty": "easy",
+    "note": "Sampled from real @AmazonHelp tweet (id 722517). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-026",
+    "tweetId": "2444044",
+    "message": "Mon* 20 Nov. We were told that no they had not shipped. They were sitting at the fulfillment center per our phone convos. There were 8 different items. None of them can apparently be delivered by Thursday, so we were told to cancel the order.",
+    "expectedIntent": "cancel_order",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Sampled from real @AmazonHelp tweet (id 2444044). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-059",
+    "tweetId": "274697",
+    "message": "No reply frm ur team ,evry time i need to beg them..#worstservice#",
+    "expectedIntent": "general_complaint",
+    "expectedDecision": "escalate",
+    "difficulty": "hard",
+    "note": "Sampled from real @AmazonHelp tweet (id 274697). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-019",
+    "tweetId": "2311245",
+    "message": "Not happening tonight at that crib",
+    "expectedIntent": "app_website_bug",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Sampled from real @AmazonHelp tweet (id 2311245). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-009",
+    "tweetId": "2448273",
+    "message": "I created a amazon account with prime and use my phone number to login. Amazon locked me out of my account and said they would send a message to my phone on how to get my account back but they never do. If i ask to change my password they do send me a msg. 6137961499",
+    "expectedIntent": "account_access",
+    "expectedDecision": "escalate",
+    "difficulty": "hard",
+    "note": "Sampled from real @AmazonHelp tweet (id 2448273). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-082",
+    "tweetId": "67519",
+    "message": "Creo que es ( Amazon )lo solicite por Amazon Prime .. envio gratuito.. yo todo lo compro desde la opción Premium",
+    "expectedIntent": "prime_membership",
+    "expectedDecision": "auto-handle",
+    "difficulty": "medium",
+    "note": "Sampled from real @AmazonHelp tweet (id 67519). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-106",
+    "tweetId": "232920",
+    "message": "I want to use my refunded amount to buy the same laptop which i had cancelled previously but the site wont let me to place the order",
+    "expectedIntent": "refund_request",
+    "expectedDecision": "escalate",
+    "difficulty": "hard",
+    "note": "Sampled from real @AmazonHelp tweet (id 232920). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-063",
+    "tweetId": "1095936",
+    "message": "Tracking # 5180734503910",
+    "expectedIntent": "order_status",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Sampled from real @AmazonHelp tweet (id 1095936). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-017",
+    "tweetId": "360198",
+    "message": "on phone now. it apparently needs to be looked into further. thanks for your help @AmazonHelp",
+    "expectedIntent": "app_website_bug",
+    "expectedDecision": "auto-handle",
+    "difficulty": "easy",
+    "note": "Sampled from real @AmazonHelp tweet (id 360198). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-006",
+    "tweetId": "2763527",
+    "message": "I had an account for years. Back in Oct, I was reviewing my cart and lists when I was booted out of the app and asked to change my password, which I did. Upon logging in again, my user name had changed, none of my history, lists or cart were present. HELP!!! 😊",
+    "expectedIntent": "account_access",
+    "expectedDecision": "escalate",
+    "difficulty": "hard",
+    "note": "Sampled from real @AmazonHelp tweet (id 2763527). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-116",
+    "tweetId": "740931",
+    "message": "I want to return it....",
+    "expectedIntent": "return_request",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Sampled from real @AmazonHelp tweet (id 740931). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-041",
+    "tweetId": "2467663",
+    "message": "Switching to for now on. Never been late and probably won’t send me a freaking fidget spinner",
+    "expectedIntent": "delivery_delay",
+    "expectedDecision": "auto-handle",
+    "difficulty": "easy",
+    "note": "Sampled from real @AmazonHelp tweet (id 2467663). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-031",
+    "tweetId": "1439462",
+    "message": "thankfully it’s just the packaging that’s ripped but not good",
+    "expectedIntent": "damaged_defective",
+    "expectedDecision": "escalate",
+    "difficulty": "easy",
+    "note": "Sampled from real @AmazonHelp tweet (id 1439462). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-100",
+    "tweetId": "1767529",
+    "message": "My recent purchase came in a busted box with the wrong size shoe and the shoe looked used and gross!",
+    "expectedIntent": "product_question",
+    "expectedDecision": "auto-handle",
+    "difficulty": "easy",
+    "note": "Sampled from real @AmazonHelp tweet (id 1767529). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-060",
+    "tweetId": "1693693",
+    "message": "Can you please supply me with an email address to make a formal complaint? Thanks.",
+    "expectedIntent": "general_complaint",
+    "expectedDecision": "escalate",
+    "difficulty": "hard",
+    "note": "Sampled from real @AmazonHelp tweet (id 1693693). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-108",
+    "tweetId": "1208776",
+    "message": "I want my gift card too for prev refund, I just forgot! where / when was my gift card delivered? tell me!",
+    "expectedIntent": "refund_request",
+    "expectedDecision": "escalate",
+    "difficulty": "medium",
+    "note": "Sampled from real @AmazonHelp tweet (id 1208776). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-025",
+    "tweetId": "13157",
+    "message": "I have asked the customer care exec on phone to cancel the order. Don't want to waste any more of my time on this.",
+    "expectedIntent": "cancel_order",
+    "expectedDecision": "auto-handle",
+    "difficulty": "medium",
+    "note": "Sampled from real @AmazonHelp tweet (id 13157). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-034",
+    "tweetId": "1163359",
+    "message": "Bought an item in July (with warranty) that’s broken!!! What do I do? Thank you.",
+    "expectedIntent": "damaged_defective",
+    "expectedDecision": "escalate",
+    "difficulty": "easy",
+    "note": "Sampled from real @AmazonHelp tweet (id 1163359). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-023",
+    "tweetId": "936731",
+    "message": "Hi I want to cancel one return order.. as my product has started working properly now. please help",
+    "expectedIntent": "cancel_order",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Sampled from real @AmazonHelp tweet (id 936731). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-097",
+    "tweetId": "2789133",
+    "message": "Why is it that we can't transfer or send Amazon pay balance to friends?",
+    "expectedIntent": "product_question",
+    "expectedDecision": "auto-handle",
+    "difficulty": "easy",
+    "note": "Sampled from real @AmazonHelp tweet (id 2789133). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-013",
+    "tweetId": "2840167",
+    "message": "It seems your subscription button is breaking the add to cart button on several of your pantry items. Clicking one time purchase is not working. I just need one!",
+    "expectedIntent": "app_website_bug",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Sampled from real @AmazonHelp tweet (id 2840167). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-051",
+    "tweetId": "576477",
+    "message": "so we cannot control our lights anymore and expect that to take a further couple days. Austrian customer services don’t work on weekends, so I thought we were out of luck.",
+    "expectedIntent": "general_complaint",
+    "expectedDecision": "escalate",
+    "difficulty": "hard",
+    "note": "Sampled from real @AmazonHelp tweet (id 576477). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-102",
+    "tweetId": "549528",
+    "message": "After 10mins they said they have managed to refund me but now I’m getting updates saying it will be delivered soon 🙈😩",
+    "expectedIntent": "refund_request",
+    "expectedDecision": "escalate",
+    "difficulty": "medium",
+    "note": "Sampled from real @AmazonHelp tweet (id 549528). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-075",
+    "tweetId": "1449012",
+    "message": "I’ve been charged £1 and although I understand what the charge is for (thats all that keeps being repeated!) I haven’t ordered anything!",
+    "expectedIntent": "payment_issue",
+    "expectedDecision": "escalate",
+    "difficulty": "medium",
+    "note": "Sampled from real @AmazonHelp tweet (id 1449012). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-033",
+    "tweetId": "382397",
+    "message": "Defective product",
+    "expectedIntent": "damaged_defective",
+    "expectedDecision": "escalate",
+    "difficulty": "hard",
+    "note": "Sampled from real @AmazonHelp tweet (id 382397). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-018",
+    "tweetId": "74718",
+    "message": "Dans mes commandes sur votre site on me dit que la commande est en préparation et qu'une partie est envoyé aujourd'hui donc je ne comprends plus rien..",
+    "expectedIntent": "app_website_bug",
+    "expectedDecision": "auto-handle",
+    "difficulty": "medium",
+    "note": "Sampled from real @AmazonHelp tweet (id 74718). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-010",
+    "tweetId": "1175591",
+    "message": "I have sent 2 emails and am locked out of my account, no response. Fix this.",
+    "expectedIntent": "account_access",
+    "expectedDecision": "escalate",
+    "difficulty": "easy",
+    "note": "Sampled from real @AmazonHelp tweet (id 1175591). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-068",
+    "tweetId": "1284523",
+    "message": "24th it said 24th. Can you send me a copy of our contract where it states I have to wait for delivery even though tracking now says 26th.",
+    "expectedIntent": "order_status",
+    "expectedDecision": "auto-handle",
+    "difficulty": "medium",
+    "note": "Sampled from real @AmazonHelp tweet (id 1284523). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-117",
+    "tweetId": "416955",
+    "message": "He obviously hasn’t returned my messages",
+    "expectedIntent": "return_request",
+    "expectedDecision": "auto-handle",
+    "difficulty": "easy",
+    "note": "Sampled from real @AmazonHelp tweet (id 416955). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-049",
+    "tweetId": "2619638",
+    "message": "How do I express my frustration with a 2-day late PRIME product I needed for a party that I still haven't had delivered?",
+    "expectedIntent": "delivery_delay",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Sampled from real @AmazonHelp tweet (id 2619638). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-020",
+    "tweetId": "288122",
+    "message": "I have responded same day (17th oct) but there was no response. Disappointing",
+    "expectedIntent": "app_website_bug",
+    "expectedDecision": "auto-handle",
+    "difficulty": "easy",
+    "note": "Sampled from real @AmazonHelp tweet (id 288122). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-105",
+    "tweetId": "1307854",
+    "message": "I want refund and compensation too, or I will go to consumer court. Such cheating with customers is not bearable",
+    "expectedIntent": "refund_request",
+    "expectedDecision": "escalate",
+    "difficulty": "medium",
+    "note": "Sampled from real @AmazonHelp tweet (id 1307854). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-081",
+    "tweetId": "2891905",
+    "message": "Chequei sim! Não é a primeira vez que compro com vocês, mas com certeza é a última.",
+    "expectedIntent": "prime_membership",
+    "expectedDecision": "auto-handle",
+    "difficulty": "easy",
+    "note": "Sampled from real @AmazonHelp tweet (id 2891905). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-061",
+    "tweetId": "527760",
+    "message": "yes i have an email to say its out for delivery but it doesn't answer my questions",
+    "expectedIntent": "order_status",
+    "expectedDecision": "auto-handle",
+    "difficulty": "easy",
+    "note": "Sampled from real @AmazonHelp tweet (id 527760). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-113",
+    "tweetId": "2297429",
+    "message": "The link on my gift receipt on how to do a return didn't work (I even played with the last 2 wondering if they were i's or L's) and I couldn't find where to scan the QC code in the app like the receipt said to do, so I called customer service. (1/)",
+    "expectedIntent": "return_request",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Sampled from real @AmazonHelp tweet (id 2297429). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-016",
+    "tweetId": "2814389",
+    "message": "@AmazonHelp this is what appears",
+    "expectedIntent": "app_website_bug",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Sampled from real @AmazonHelp tweet (id 2814389). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-077",
+    "tweetId": "1680977",
+    "message": "I keep being charged for something from Amazon and I'm not sure what or why. Please help",
+    "expectedIntent": "payment_issue",
+    "expectedDecision": "escalate",
+    "difficulty": "easy",
+    "note": "Sampled from real @AmazonHelp tweet (id 1680977). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-054",
+    "tweetId": "238092",
+    "message": "Tubelight, Daddy and almost all the movies and series. I contacted your customer service member this evening.",
+    "expectedIntent": "general_complaint",
+    "expectedDecision": "escalate",
+    "difficulty": "hard",
+    "note": "Sampled from real @AmazonHelp tweet (id 238092). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-042",
+    "tweetId": "2873290",
+    "message": "LOL...you've missed the delivery date of every order of mine shipped via usps, for the last 5 months including todays order.",
+    "expectedIntent": "delivery_delay",
+    "expectedDecision": "auto-handle",
+    "difficulty": "medium",
+    "note": "Sampled from real @AmazonHelp tweet (id 2873290). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-080",
+    "tweetId": "2350857",
+    "message": "I have been charged twice for an item I bought from amazon.es can I have my money back?",
+    "expectedIntent": "payment_issue",
+    "expectedDecision": "escalate",
+    "difficulty": "easy",
+    "note": "Sampled from real @AmazonHelp tweet (id 2350857). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-015",
+    "tweetId": "1114921",
+    "message": "Mais comme il n’en reste qu’un sur le site j’espère que je l’aurais cette semaine sinon franchement ça sert à rien de précommander 😡",
+    "expectedIntent": "app_website_bug",
+    "expectedDecision": "auto-handle",
+    "difficulty": "medium",
+    "note": "Sampled from real @AmazonHelp tweet (id 1114921). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-070",
+    "tweetId": "530713",
+    "message": "Nope! I didn't receive an email. I get an apology when I check my tracking information. ¯\\_(ツ)_/¯",
+    "expectedIntent": "order_status",
+    "expectedDecision": "auto-handle",
+    "difficulty": "easy",
+    "note": "Sampled from real @AmazonHelp tweet (id 530713). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-078",
+    "tweetId": "990363",
+    "message": "I was promised via your chat service that my card wouldn’t be charged for this, but now I have been anyway. Not really amused...",
+    "expectedIntent": "payment_issue",
+    "expectedDecision": "escalate",
+    "difficulty": "medium",
+    "note": "Sampled from real @AmazonHelp tweet (id 990363). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-045",
+    "tweetId": "1505031",
+    "message": "Royal mail dont usually deliver so late anyway! THE POINT IS if we'd known it wld b so late AT BEST we wld not have gone with u.",
+    "expectedIntent": "delivery_delay",
+    "expectedDecision": "auto-handle",
+    "difficulty": "medium",
+    "note": "Sampled from real @AmazonHelp tweet (id 1505031). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-052",
+    "tweetId": "2190939",
+    "message": "literally the 4th way of filing my complaint. making unauthorized transactions for 2 months now. I need a response",
+    "expectedIntent": "general_complaint",
+    "expectedDecision": "escalate",
+    "difficulty": "hard",
+    "note": "Sampled from real @AmazonHelp tweet (id 2190939). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-050",
+    "tweetId": "2316989",
+    "message": "Your product delivery date 10 Nov but still not delivered",
+    "expectedIntent": "delivery_delay",
+    "expectedDecision": "auto-handle",
+    "difficulty": "easy",
+    "note": "Sampled from real @AmazonHelp tweet (id 2316989). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-024",
+    "tweetId": "225016",
+    "message": "To cancel the order .. is the way customers are treated",
+    "expectedIntent": "cancel_order",
+    "expectedDecision": "auto-handle",
+    "difficulty": "easy",
+    "note": "Sampled from real @AmazonHelp tweet (id 225016). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-040",
+    "tweetId": "2507259",
+    "message": "you guys mailed me a broken internet cable",
+    "expectedIntent": "damaged_defective",
+    "expectedDecision": "escalate",
+    "difficulty": "easy",
+    "note": "Sampled from real @AmazonHelp tweet (id 2507259). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-008",
+    "tweetId": "1722475",
+    "message": "Yes, have also 'reset password' option on that form and had no email. I get the email using the 'forgot password' on the main website, but after resetting the password, the account still doesn't work.",
+    "expectedIntent": "account_access",
+    "expectedDecision": "escalate",
+    "difficulty": "medium",
+    "note": "Sampled from real @AmazonHelp tweet (id 1722475). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-001",
+    "tweetId": "1728630",
+    "message": "Yes, somebody had tried to access my account and the email I received suggested I change my password",
+    "expectedIntent": "account_access",
+    "expectedDecision": "escalate",
+    "difficulty": "easy",
+    "note": "Sampled from real @AmazonHelp tweet (id 1728630). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-032",
+    "tweetId": "2133108",
+    "message": "My new shoes got torned within a month, tried a lot to get it returned. Went to bata too to they said it's duplicate product. You Conned me",
+    "expectedIntent": "damaged_defective",
+    "expectedDecision": "escalate",
+    "difficulty": "medium",
+    "note": "Sampled from real @AmazonHelp tweet (id 2133108). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-047",
+    "tweetId": "158745",
+    "message": "The page just reloads indefinitely? I guess I can try again later. Just don't wanna miss deals !",
+    "expectedIntent": "delivery_delay",
+    "expectedDecision": "auto-handle",
+    "difficulty": "easy",
+    "note": "Sampled from real @AmazonHelp tweet (id 158745). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-083",
+    "tweetId": "1711440",
+    "message": "Yes. #AmazonEcho #Prime",
+    "expectedIntent": "prime_membership",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Sampled from real @AmazonHelp tweet (id 1711440). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-028",
+    "tweetId": "1253919",
+    "message": "Already reached..They denied confirmation sent for 18..For posting on Twitter they don't care @AmazonHelp offered to cancel order..",
+    "expectedIntent": "cancel_order",
+    "expectedDecision": "auto-handle",
+    "difficulty": "medium",
+    "note": "Sampled from real @AmazonHelp tweet (id 1253919). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-109",
+    "tweetId": "2670738",
+    "message": "i checked with ur agents but its not a satisfactory reply from them. previously i ordered this and due to color of mobile issue i had to cancel my mobile order ...but word power book was dispatched ...later i get to know that its cancelled and refund is issued due to damage",
+    "expectedIntent": "refund_request",
+    "expectedDecision": "escalate",
+    "difficulty": "hard",
+    "note": "Sampled from real @AmazonHelp tweet (id 2670738). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-062",
+    "tweetId": "1177142",
+    "message": "How? When USPS has made its deliveries for the day? Tracking says its only I'm Vacaville. HOURS away from me!",
+    "expectedIntent": "order_status",
+    "expectedDecision": "auto-handle",
+    "difficulty": "medium",
+    "note": "Sampled from real @AmazonHelp tweet (id 1177142). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-119",
+    "tweetId": "2317676",
+    "message": "The items due last Sat are now “late” & due by 14th, & the Nerf gun I REORDERED as you lost the first one, has been RETURNED when I want it!",
+    "expectedIntent": "return_request",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Sampled from real @AmazonHelp tweet (id 2317676). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-088",
+    "tweetId": "2965322",
+    "message": "Just tried it again. When I sign in with my existing credentials, it says \"No offers available\" and redirects to the home page. I'm sure I don't qualify for the trial (I've had Prime Student before), so maybe that's causing the issue? Can't find where to sign up without the trial",
+    "expectedIntent": "prime_membership",
+    "expectedDecision": "auto-handle",
+    "difficulty": "medium",
+    "note": "Sampled from real @AmazonHelp tweet (id 2965322). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-094",
+    "tweetId": "493393",
+    "message": "Can you tell me what warranty is offered on a nexus 5x phone purchased on amazon uk?",
+    "expectedIntent": "product_question",
+    "expectedDecision": "auto-handle",
+    "difficulty": "easy",
+    "note": "Sampled from real @AmazonHelp tweet (id 493393). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-021",
+    "tweetId": "1073354",
+    "message": "He offered to cancel the order. That solves everything right?you cant find item and cancel",
+    "expectedIntent": "cancel_order",
+    "expectedDecision": "auto-handle",
+    "difficulty": "easy",
+    "note": "Sampled from real @AmazonHelp tweet (id 1073354). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-048",
+    "tweetId": "495942",
+    "message": "She called and spent 15 mins on the phone before having the issue escalated to the gift card department. She is waiting for a response from them, and doesn’t have Twitter. It’s absurd we are having to deal with this level of crap.",
+    "expectedIntent": "delivery_delay",
+    "expectedDecision": "auto-handle",
+    "difficulty": "medium",
+    "note": "Sampled from real @AmazonHelp tweet (id 495942). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-044",
+    "tweetId": "467422",
+    "message": "I still haven't received my package, and when I check the website it has no updates 🤷",
+    "expectedIntent": "delivery_delay",
+    "expectedDecision": "auto-handle",
+    "difficulty": "easy",
+    "note": "Sampled from real @AmazonHelp tweet (id 467422). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-053",
+    "tweetId": "498358",
+    "message": "I am so frustrated. Over two weeks, 3 calls and 4 chat sessions with no resolution. I am stuck in an endless loop of empty promises from your level one customer service reps! HELP!",
+    "expectedIntent": "general_complaint",
+    "expectedDecision": "escalate",
+    "difficulty": "hard",
+    "note": "Sampled from real @AmazonHelp tweet (id 498358). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-073",
+    "tweetId": "1732150",
+    "message": "I returned a copy of Mario Odyssey because I was sent and charged for 2 copies. I received an email to say you received the 1/2",
+    "expectedIntent": "payment_issue",
+    "expectedDecision": "escalate",
+    "difficulty": "hard",
+    "note": "Sampled from real @AmazonHelp tweet (id 1732150). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-092",
+    "tweetId": "1477982",
+    "message": "Ugh, I REALLY need this item delivered today as scheduled, but it hasn't even left carrier facility! No way it'll be here by 8pm",
+    "expectedIntent": "product_question",
+    "expectedDecision": "auto-handle",
+    "difficulty": "medium",
+    "note": "Sampled from real @AmazonHelp tweet (id 1477982). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-039",
+    "tweetId": "231710",
+    "message": "Not working....",
+    "expectedIntent": "damaged_defective",
+    "expectedDecision": "escalate",
+    "difficulty": "hard",
+    "note": "Sampled from real @AmazonHelp tweet (id 231710). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-067",
+    "tweetId": "2664939",
+    "message": "still haven’t had dispatch confirmation since I altered order on Saturday - where can I track?",
+    "expectedIntent": "order_status",
+    "expectedDecision": "auto-handle",
+    "difficulty": "easy",
+    "note": "Sampled from real @AmazonHelp tweet (id 2664939). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-085",
+    "tweetId": "874864",
+    "message": "Done that - interestingly our son has Prime too and also says his item was delivered today but it hasn’t been !! And we pay for this!!!",
+    "expectedIntent": "prime_membership",
+    "expectedDecision": "auto-handle",
+    "difficulty": "medium",
+    "note": "Sampled from real @AmazonHelp tweet (id 874864). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-086",
+    "tweetId": "881066",
+    "message": "prime membership, the card was expired so I expected a \"hey update your payment info before we go through with the charge\"",
+    "expectedIntent": "prime_membership",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Sampled from real @AmazonHelp tweet (id 881066). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-095",
+    "tweetId": "789030",
+    "message": "The Rep advised that she would send my acct to the Account Specialist but... no confirmation yet that the Account Specialist actually has it",
+    "expectedIntent": "product_question",
+    "expectedDecision": "auto-handle",
+    "difficulty": "medium",
+    "note": "Sampled from real @AmazonHelp tweet (id 789030). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-096",
+    "tweetId": "2618172",
+    "message": "It’s not really good enough is it !!!",
+    "expectedIntent": "product_question",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Sampled from real @AmazonHelp tweet (id 2618172). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-030",
+    "tweetId": "1768255",
+    "message": "This really doesn't help. I simply want to cancel an order.",
+    "expectedIntent": "cancel_order",
+    "expectedDecision": "auto-handle",
+    "difficulty": "easy",
+    "note": "Sampled from real @AmazonHelp tweet (id 1768255). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-111",
+    "tweetId": "920960",
+    "message": "this is the worst experience from Amazon.Item returned without any delivery attempt. (1/2)",
+    "expectedIntent": "return_request",
+    "expectedDecision": "auto-handle",
+    "difficulty": "easy",
+    "note": "Sampled from real @AmazonHelp tweet (id 920960). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-058",
+    "tweetId": "373322",
+    "message": "It suggested to contact customer service ^BC",
+    "expectedIntent": "general_complaint",
+    "expectedDecision": "escalate",
+    "difficulty": "hard",
+    "note": "Sampled from real @AmazonHelp tweet (id 373322). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-115",
+    "tweetId": "2403997",
+    "message": "- I have a return but need to speak with a rep. Can someone call me at 941-309-2160? It's for a guest at the hotel I work at, not my personal account.",
+    "expectedIntent": "return_request",
+    "expectedDecision": "auto-handle",
+    "difficulty": "medium",
+    "note": "Sampled from real @AmazonHelp tweet (id 2403997). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-076",
+    "tweetId": "2382519",
+    "message": "why was I charged $15 for a one month trial of prime?",
+    "expectedIntent": "payment_issue",
+    "expectedDecision": "escalate",
+    "difficulty": "hard",
+    "note": "Sampled from real @AmazonHelp tweet (id 2382519). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-043",
+    "tweetId": "2580482",
+    "message": "One of the games only just got dispatched so is arriving one day late, and the other isn't expected back in stock until tomorrow, you guys really need to get a grip of your supply chain, this is unacceptable, makes me wonder why I bother paying prime. -.-",
+    "expectedIntent": "delivery_delay",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Sampled from real @AmazonHelp tweet (id 2580482). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-046",
+    "tweetId": "603173",
+    "message": "why even use usps, when they are constantly unreliable and late? Is there even a point to prime anymore, when packages are always late?",
+    "expectedIntent": "delivery_delay",
+    "expectedDecision": "auto-handle",
+    "difficulty": "hard",
+    "note": "Sampled from real @AmazonHelp tweet (id 603173). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-114",
+    "tweetId": "332785",
+    "message": "Still My Money not return back from AMAZON even after 4 days. Vahiyat Service by @AmazonHelp",
+    "expectedIntent": "return_request",
+    "expectedDecision": "auto-handle",
+    "difficulty": "easy",
+    "note": "Sampled from real @AmazonHelp tweet (id 332785). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-038",
+    "tweetId": "1511973",
+    "message": "if I have a complaint with an order being faulty how do I go about requesting this is looked in to please?",
+    "expectedIntent": "damaged_defective",
+    "expectedDecision": "escalate",
+    "difficulty": "medium",
+    "note": "Sampled from real @AmazonHelp tweet (id 1511973). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-037",
+    "tweetId": "1273384",
+    "message": "laptop not working 10 days after purchase . :/ Really irritating",
+    "expectedIntent": "damaged_defective",
+    "expectedDecision": "escalate",
+    "difficulty": "easy",
+    "note": "Sampled from real @AmazonHelp tweet (id 1273384). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-035",
+    "tweetId": "1267635",
+    "message": "I want people to see the pics I took of damaged delivery. Also the product listing says \"item not returnable\". Isn't that against policy 1/2",
+    "expectedIntent": "damaged_defective",
+    "expectedDecision": "escalate",
+    "difficulty": "medium",
+    "note": "Sampled from real @AmazonHelp tweet (id 1267635). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-012",
+    "tweetId": "1775032",
+    "message": "It wasn't a scanning error — there was a photograph of it on my doorstop viewable on your website — but I understand that there are corporate policies with respect to timelines, and that reps can't override them. I'm just frustrated.",
+    "expectedIntent": "app_website_bug",
+    "expectedDecision": "auto-handle",
+    "difficulty": "medium",
+    "note": "Sampled from real @AmazonHelp tweet (id 1775032). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-022",
+    "tweetId": "83472",
+    "message": "Here is what I see. I have also received an email saying that it is out of stock and if I want to cancel the order",
+    "expectedIntent": "cancel_order",
+    "expectedDecision": "auto-handle",
+    "difficulty": "medium",
+    "note": "Sampled from real @AmazonHelp tweet (id 83472). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-004",
+    "tweetId": "929199",
+    "message": "someone hacked my account using a different email.. i cant access that account",
+    "expectedIntent": "account_access",
+    "expectedDecision": "escalate",
+    "difficulty": "easy",
+    "note": "Sampled from real @AmazonHelp tweet (id 929199). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-079",
+    "tweetId": "2308291",
+    "message": "please can you tell me why I’ve been charged 2x for an order I placed on Thursday? Really don’t appreciate £78 being taken out twice! 😅",
+    "expectedIntent": "payment_issue",
+    "expectedDecision": "escalate",
+    "difficulty": "hard",
+    "note": "Sampled from real @AmazonHelp tweet (id 2308291). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-036",
+    "tweetId": "362435",
+    "message": "how do I contact u?Ordered pack of 40 erasers: 3 broken,some poor quality,some the same.Don't want 2 return all of them.Pls help",
+    "expectedIntent": "damaged_defective",
+    "expectedDecision": "escalate",
+    "difficulty": "hard",
+    "note": "Sampled from real @AmazonHelp tweet (id 362435). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-005",
+    "tweetId": "853892",
+    "message": "Can you please confirm that has received my fax (billing). I have been locked out of my account for almost a month!",
+    "expectedIntent": "account_access",
+    "expectedDecision": "escalate",
+    "difficulty": "medium",
+    "note": "Sampled from real @AmazonHelp tweet (id 853892). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-007",
+    "tweetId": "637153",
+    "message": "my account was hacked. Saturday you told me nothing could be done.",
+    "expectedIntent": "account_access",
+    "expectedDecision": "escalate",
+    "difficulty": "easy",
+    "note": "Sampled from real @AmazonHelp tweet (id 637153). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-107",
+    "tweetId": "2570139",
+    "message": "what is the procedure in getting a refund",
+    "expectedIntent": "refund_request",
+    "expectedDecision": "escalate",
+    "difficulty": "easy",
+    "note": "Sampled from real @AmazonHelp tweet (id 2570139). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-055",
+    "tweetId": "2718070",
+    "message": "I am yet to get any satisfactory reply from anyone at amazon till date..I have already filed consumer complaint. Is there anything you can do to support me?",
+    "expectedIntent": "general_complaint",
+    "expectedDecision": "escalate",
+    "difficulty": "hard",
+    "note": "Sampled from real @AmazonHelp tweet (id 2718070). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-098",
+    "tweetId": "2171223",
+    "message": "thank u so much.pls hear each and every tape especially of oct 8, nov 11and 12 and why ihad added 1000 in amazon pay balace just to show my loyality an read mails and feed back.dont leave anything then u will know i m right or wrong",
+    "expectedIntent": "product_question",
+    "expectedDecision": "auto-handle",
+    "difficulty": "medium",
+    "note": "Sampled from real @AmazonHelp tweet (id 2171223). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-091",
+    "tweetId": "124002",
+    "message": "And why when I call nobody let me talk to an account specialist!",
+    "expectedIntent": "product_question",
+    "expectedDecision": "auto-handle",
+    "difficulty": "easy",
+    "note": "Sampled from real @AmazonHelp tweet (id 124002). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-074",
+    "tweetId": "1763181",
+    "message": "Hi can you help me with something regarding a charge on my account",
+    "expectedIntent": "payment_issue",
+    "expectedDecision": "escalate",
+    "difficulty": "easy",
+    "note": "Sampled from real @AmazonHelp tweet (id 1763181). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-014",
+    "tweetId": "2236358",
+    "message": "C'est l'idée, je n'ai pas l'habitude d'Amazon musique, et la piste s'appelant comme l'album...",
+    "expectedIntent": "app_website_bug",
+    "expectedDecision": "auto-handle",
+    "difficulty": "easy",
+    "note": "Sampled from real @AmazonHelp tweet (id 2236358). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  },
+  {
+    "id": "rg-057",
+    "tweetId": "377236",
+    "message": "and @AmazonHelp weekend is here even d details r provided.. still no response #irritated #worstexperience #verydisgustingservice",
+    "expectedIntent": "general_complaint",
+    "expectedDecision": "escalate",
+    "difficulty": "hard",
+    "note": "Sampled from real @AmazonHelp tweet (id 377236). Stratified by intent × difficulty. Labelled by reviewing the message text against the 12-intent taxonomy; ambiguous cases assigned to the primary actionable intent."
+  }
+]

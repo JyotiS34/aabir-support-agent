@@ -1,0 +1,59 @@
+# dependencies
+node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files 
+.env*
+
+# vercel
+.vercel
+
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+local-*
+.claude
+.z-ai-config
+*.log
+dev.log
+db/*.db
+dev.out.log
+test
+prompt
+data/amazonhelp_tweets.csv      
+data/banking77_train.csv        
+data/banking77_test.csv         
+qa-shots/
+upload/
+examples/
+
+server.log
+# Skills directory
+/skills/
