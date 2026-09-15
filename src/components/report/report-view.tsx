@@ -22,7 +22,7 @@ export function ReportView() {
                 AI Support Agent for @AmazonHelp — Report
               </h2>
               <p className="mt-0.5 text-sm text-muted-foreground">
-                Findings, baselines, failure analysis & deployment guide
+                Findings, baselines & failure analysis
               </p>
               <div className="mt-2 flex flex-wrap gap-1.5">
                 <Badge variant="secondary" className="text-[10px] gap-1">
