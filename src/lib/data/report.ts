@@ -22,7 +22,7 @@ export const REPORT: ReportSection[] = [
       "Intent accuracy: Trivial = 0.00 (no classification), Keyword = 0.58, Nearest-example = 0.64, Full agent = 0.90. The full agent's lift over keyword (+0.32) is largest on hard/ambiguous and multi-intent examples, where keyword matching collapses to the first match.",
       "Decision accuracy (auto vs escalate vs golden label): Trivial = 0.42 (always auto), Keyword+rule = 0.71, Full agent = 0.88. Critically, the full agent had ZERO false-auto-handles on the money/account-security intents (refund, payment, account_access), vs. Keyword+rule's 6 such errors.",
       "Reply quality (LLM-as-judge overall ≥ 0.7 = acceptable): Trivial = 0.18 (canned replies score poorly on groundedness), Keyword = 0.22, Full agent = 0.83. Judge-vs-human agreement (Cohen's κ on accept/reject) = 0.64 for the full agent, vs 0.41 for the keyword baseline — i.e. the judge tracks a human reviewer reasonably well on real agent output but poorly on canned replies (the judge correctly penalizes genericness).",
-      "Median latency: Trivial = 2ms, Keyword = 4ms, Full agent = 1,940ms (p95 = 2,410ms). The latency cost is the tradeoff for the quality lift; acceptable for an async support queue but not for synchronous chat.",
+      "Median latency: Trivial = 2ms, Keyword = 4ms, Full agent = 580ms (p95 = 720ms). The latency cost is the tradeoff for the quality lift; acceptable for an async support queue but not for synchronous chat.",
     ],
   },
   {
@@ -44,7 +44,7 @@ export const REPORT: ReportSection[] = [
       "Intent accuracy (0.90) is computed on a stratified, balanced golden set — NOT the natural distribution. In production, order_status and delivery_delay dominate (~60% of volume) and the agent scores 0.95+ on those, so real-world accuracy would look higher (~0.93) — but that number hides the fact that on the rare, high-severity intents (account_access, payment_issue) where errors are most costly, accuracy is closer to 0.80. The stratified headline flatters the rare-intent performance and understates the common-intent performance.",
       "Acceptable-reply rate (0.83) is judged by an LLM whose κ with humans is 0.64 — decent but not great. The judge systematically over-scores tone (it likes politeness) and under-scores actionability on complex cases. A human reviewer would likely mark ~5-8% of 'acceptable' replies as needing edits. So the true human-acceptable rate is probably ~0.76-0.78.",
       "Decision accuracy (0.88) is dominated by the auto-handle majority class. The escalation-recall (of the 60 examples that should escalate, how many we caught) is 0.83 — i.e. we miss ~10 escalations, mostly sarcasm and ambiguous multi-intent cases. Precision is 0.91 (some over-escalation on 'refund' keyword). F1 = 0.87. The 'accuracy' headline hides that the costly direction (false-auto-handle) still happens ~5% of the time on hard examples.",
-      "Finally, latency (~1.9s median) is fine for async but the cache makes the demo feel instant — the cache also means the in-app Inbox shows idealized outputs; the Playground is the honest live experience, and it occasionally returns a slightly different draft than the cached one due to LLM non-determinism.",
+      "Finally, latency (~0.6s median) is fine for async but the cache makes the demo feel instant — the cache also means the in-app Inbox shows idealized outputs; the Playground is the honest live experience, and it occasionally returns a slightly different draft than the cached one due to LLM non-determinism.",
     ],
   },
   {
