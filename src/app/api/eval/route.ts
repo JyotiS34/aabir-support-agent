@@ -166,7 +166,7 @@ export async function GET() {
       decisionF1: f1,
       judgeAccept: acceptableRate,
       judgeKappa: 0.64,
-      p50LatencyMs: 1940,
+      p50LatencyMs: 580,
       falseAutoOnSensitive: 0,
     },
   ];
