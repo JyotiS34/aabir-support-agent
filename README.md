@@ -185,6 +185,7 @@ src/
 - **Fine-tuned model**: bert-novel-v1 → custom BERT sentiment classifier (4-class: positive/negative/neutral/irrelevant), hosted at `jyqti-bert-novel.hf.space`
 - **Charts**: Recharts
 - **State**: Zustand (client) + React Query (server)
+
  **Built with Z.ai**
 
 ---
